@@ -1,0 +1,214 @@
+@import url('reset.css');
+
+body{
+	background-image: url(../img/index_bg.png);
+	background-size: cover;
+	/*放很大會重複一個背景 韓文跟括號多一種字體?*/
+	font-family: Quantico, Yusei Magic;
+	color: #ffffff;
+}
+
+.wrapper{
+	margin: 0 auto;
+	width: 1200px;
+}
+
+/*menu bar*/
+
+.menu{
+	background-color: rgba(0,0,0,.85);
+	position: fixed;
+	top: 0;
+	left: 5px;
+	z-index: 3;
+	width: 100%;
+}
+
+.menu a img{
+	width: 102px;
+	height: 100px;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+
+.menu ul{
+	float: right;
+	display: flex;
+	margin-top: 40px;
+	margin-right: 150px;
+}
+
+.menu li{
+	margin-left: 40px;
+}
+
+.menu li a{
+	color: #ffffff;
+	font-size: 25px;
+	text-decoration-line: none;
+}
+
+.menu li a:hover{
+	color: #8E2FBE;
+}
+
+.menu li a img{
+	width: 40px;
+	height: 25px;
+	margin-top: 0;
+}
+
+/*player*/
+
+.player{
+	position: fixed;
+	top: 475px;
+	right: 30px;
+    z-index: 3;
+    /*放很大就不見了*/
+}
+
+.player img{
+	width: 180px;
+}
+
+/*type*/
+
+.type{
+	margin: 0 auto;
+	margin-top: 111px;
+}
+
+.type ul{
+	width: 1040px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.type li{
+	margin-left: 20px;
+	margin-bottom: -20px;
+}
+
+.type img{
+	width: 320px;
+	height: 185px;
+	opacity: .7;
+}
+
+.type h2{
+	color: #ffffff;
+	font-size: 40px;
+	text-align: center;
+	position: relative;
+	top: -110px;
+}
+
+/*rank*/
+
+.rank{
+	width: 900px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+.rank ul{
+	
+}
+
+.rank li{
+	height: 230px;
+    margin-bottom: 50px;
+}
+
+.rank img{
+	width: 100%;
+	z-index: 1;
+}
+
+
+.rank h3{
+	color: #000000;
+	background-color: #ffffff;
+	width: 860px;
+	font-size: 30px;
+	text-align: center;
+	line-height: 70px;
+	position: relative;
+	top: -200px;
+	left: 20px;
+	z-index: 2;
+}
+
+.rank p{
+	color: #ffffff;
+	font-size: 20px;
+	line-height: 30px;
+	position: relative;
+	top: -190px;
+	left: 30px;
+	z-index: 2;
+}
+
+/*icon跑不出來 改完要修改文字位置 會移動*/
+
+.new_song li a h3{
+	color: #000000;
+	font-size: 22px;
+	margin-top: -35px;
+	padding-left: 100px;
+}
+
+.new_song li a h4{
+	color: #000000;
+	font-size: 18px;
+	padding-left: 100px;
+	margin-top: 10px;
+}
+
+/*.new_song li h4:hover{
+	color: pink;
+}*/
+
+/*footer*/
+
+.footer{
+	margin: 0 auto;
+	margin-top: 20px;	
+}
+
+.information{	
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+.information li{
+	padding-left: 10px;
+	padding-right: 10px;
+	/*稍微偏一點的感覺*/
+}
+
+.footer a{
+	color: #ffffff;
+	font-size: 20px;
+	text-decoration-line: none;
+}
+
+.contact{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+	/*border: 2px solid pink;*/
+}
+
+/*.icon i{}*/
+/*要補css*/
+
+.footer h5{
+	color: #ffffff;
+	font-size: 16px;
+	text-align: center;
+	margin-bottom: 20px;
+}
