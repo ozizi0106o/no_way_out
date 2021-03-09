@@ -1,5 +1,9 @@
 @import url('reset.css');
 
+* {
+	box-sizing: border-box;
+}
+
 body{
 	background-image: url(../img/index_bg.png);
 	background-size: cover;
@@ -88,6 +92,16 @@ body{
 	width: 150px;*/
 	/*加底線嗎 離上位置如何調整?*/
 }
+
+.news h2:after{
+	content:"";
+	width: 150px;
+	margin:10px auto;
+	height: 2px;
+	display: block;
+	background: #fff;
+}
+/* 下底線 記一下改備註 */
 
 .news_block ul{
 	margin-left: -70px;
@@ -180,7 +194,6 @@ body{
 .information li{
 	padding-left: 10px;
 	padding-right: 10px;
-	/*稍微偏一點的感覺*/
 }
 
 .footer a{
@@ -193,11 +206,16 @@ body{
 	display: flex;
 	justify-content: center;
 	margin-bottom: 20px;
-	/*border: 2px solid pink;*/
 }
 
-/*.icon i{}*/
-/*要補css*/
+.contact li{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.contact li a img{
+	width: 40px;
+}
 
 .footer h5{
 	color: #ffffff;
