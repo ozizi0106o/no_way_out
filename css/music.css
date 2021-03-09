@@ -19,7 +19,7 @@ body{
 
 /*menu bar*/
 
-.menu{
+header{
 	background-color: rgba(0,0,0,.85);
 	position: fixed;
 	top: 0;
@@ -28,35 +28,37 @@ body{
 	width: 100%;
 }
 
-.menu a img{
+header a img{
 	width: 102px;
 	height: 100px;
 	margin-top: 10px;
 	margin-left: 5px;
 }
 
-.menu ul{
+header ul{
 	float: right;
 	display: flex;
 	margin-top: 40px;
 	margin-right: 150px;
 }
 
-.menu li{
+header li{
 	margin-left: 40px;
 }
 
-.menu li a{
+header li a{
 	color: #ffffff;
 	font-size: 25px;
 	text-decoration-line: none;
 }
 
-.menu li a:hover{
+header li a:hover{
 	color: #8E2FBE;
 }
 
-.menu li a img{
+header li a img{
+	max-width: 100%;
+	/* 圖片依舊被壓縮 */
 	width: 40px;
 	height: 25px;
 	margin-top: 0;
@@ -73,6 +75,8 @@ body{
 }
 
 .player img{
+	max-width: 100%;
+	/* 圖片沒有變化 */
 	width: 180px;
 }
 
@@ -96,6 +100,8 @@ body{
 }
 
 .type img{
+	max-width: 100%;
+	/* 圖片沒變化 */
 	width: 320px;
 	height: 185px;
 	opacity: .7;
@@ -123,10 +129,12 @@ body{
 }
 
 .rank img{
+	max-width: 100%;
+	/* 沒有變化 */
 	width: 100%;
+	/* 背景圖片高度沒有跟著加大 */
 	z-index: 1;
 }
-
 
 .rank h3{
 	color: #000000;
@@ -151,31 +159,12 @@ body{
 	z-index: 2;
 }
 
-/*icon跑不出來 改完要修改文字位置 會移動*/
-
-.new_song li a h3{
-	color: #000000;
-	font-size: 22px;
-	margin-top: -35px;
-	padding-left: 100px;
-}
-
-.new_song li a h4{
-	color: #000000;
-	font-size: 18px;
-	padding-left: 100px;
-	margin-top: 10px;
-}
-
-/*.new_song li h4:hover{
-	color: pink;
-}*/
-
 /*footer*/
 
-.footer{
+footer{
+	width: 300px;
 	margin: 0 auto;
-	margin-top: 20px;	
+	margin-top: 20px;
 }
 
 .information{	
@@ -189,7 +178,7 @@ body{
 	padding-right: 10px;
 }
 
-.footer a{
+footer a{
 	color: #ffffff;
 	font-size: 20px;
 	text-decoration-line: none;
@@ -207,12 +196,113 @@ body{
 }
 
 .contact li a img{
+	max-width: 100%;
+	/* 沒有變化 */
 	width: 40px;
 }
 
-.footer h5{
+footer h5{
 	color: #ffffff;
 	font-size: 16px;
 	text-align: center;
 	margin-bottom: 20px;
 }
+
+@media screen and (max-width: 575px){
+	body{
+	  width: 100%;
+	}
+
+	.wrapper{
+		width: 100%;		
+	}
+
+	header{
+		width: 100%;
+		border: 2px solid yellow;
+		/* 直接掉到logo下一排 且字會被砍掉 搜尋圖示也不見被壓縮*/
+	}
+
+	header ul{
+		width: 100%;
+	}
+
+	header li{
+		width: 100%;
+	}
+
+	header li a{
+		width: 100%;
+	}
+
+	.player{
+		/* width: 100%; */
+		border: 3px solid pink;
+		/* 加100%跑到左邊去 而且直接貼網頁底部 圖片範圍變大*/
+	}
+
+	.type{
+		width: 100%;		
+		/* 圖片左邊空隙大於右邊 */
+	}
+
+	.type ul{
+		width: 100%;
+	}
+
+	.type li{
+		width: 100%;
+		text-align: center;
+	}
+
+	.type h2{
+		width: 100%;
+	}
+
+	.rank{
+		width: 100%;
+		margin-top: 100px;
+	}
+
+	.rank li{
+		width: 100%;
+	}
+
+	.rank h3{
+		width: 100%;
+	}
+
+	.rank p{
+		width: 100%;
+	}
+	
+	footer{
+		width: 100%;
+		border: 2px solid green;
+		/* 位置大走鐘 而且文字跟icon變成左邊對齊 設定100% li間距變很大 */
+	}
+
+	.information{
+		width: 100%;
+	}
+
+	/* .information li{
+		width: 100%;
+	} */
+
+	footer a{
+		width: 100%;
+	}
+
+	.contact{
+		width: 100%;
+	}
+
+	/* .contact li{
+		width: 100%;
+	} */
+
+	footer h5{
+		width: 100%;
+	}
+  }
