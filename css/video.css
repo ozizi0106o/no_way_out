@@ -90,9 +90,9 @@ body{
 	z-index: 1;
 }
 
-.mv a{
-	/*border: 2px solid pink;*/
-}
+/* .mv a{
+	border: 2px solid pink;
+} */
 /*圖片上的btn跑到下面華語旁邊了*/
 
 .mv .left{
@@ -162,9 +162,9 @@ body{
 	margin-left: 40px;
 }
 
-.mandarin ul{
-	/*border: 2px solid pink;*/
-}
+/* .mandarin ul{
+	border: 2px solid pink;
+} */
 
 .mandarin li{
 	display: inline-block;
@@ -202,8 +202,6 @@ body{
 	margin-left: 40px;
 }
 
-.taiwanese ul{}
-
 .taiwanese li{
 	display: inline-block;
 	padding-left: 40px;
@@ -239,8 +237,6 @@ body{
 	margin-bottom: 16px;
 	margin-left: 40px;
 }
-
-.korean ul{}
 
 .korean li{
 	display: inline-block;
@@ -278,8 +274,6 @@ body{
 	margin-left: 40px;
 }
 
-.japanese ul{}
-
 .japanese li{
 	display: inline-block;
 	padding-left: 40px;
@@ -316,8 +310,6 @@ body{
 	margin-left: 40px;
 }
 
-.western ul{}
-
 .western li{
 	display: inline-block;
 	padding-left: 40px;
@@ -353,8 +345,6 @@ body{
 	margin-bottom: 16px;
 	margin-left: 40px;
 }
-
-.children ul{}
 
 .children li{
 	display: inline-block;

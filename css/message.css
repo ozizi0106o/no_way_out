@@ -85,8 +85,6 @@ body{
 	/*border: 2px solid pink;*/
 }
 
-.message_bar a{}
-
 .message_bar a h2 {
 	background-color: #A7A7A7;
 	width: 100px;
@@ -106,8 +104,6 @@ body{
 	margin: 0 auto;
 	width: 1000px;
 }
-
-.kind a{}
 
 .kind h2{
 	background-color: #D9D9D9;
