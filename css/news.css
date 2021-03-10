@@ -17,9 +17,7 @@ body{
 	width: 1200px;
 }
 
-/*menu bar*/
-
-/*menu bar*/
+/* ===== menu bar ===== */
 
 header{
 	background-color: rgba(0,0,0,.85);
@@ -64,7 +62,7 @@ header li a img{
 	margin-top: 0;
 }
 
-/*player*/
+/* ===== player ===== */
 
 .player{
 	position: fixed;
@@ -78,7 +76,7 @@ header li a img{
 	width: 180px;
 }
 
-/*news*/
+/* ===== news ===== */
 
 .news{
 	margin: 0 auto;
@@ -145,9 +143,9 @@ header li a img{
 	margin-bottom: 30px;
 }
 
-/*sidebar*/
+/* ===== aside ===== */
 
-.sidebar{
+aside{
 	outline: 2px solid #ffffff;
 	display: inline-block;
 	position: fixed;
@@ -156,20 +154,20 @@ header li a img{
 	right: 230px;
 }
 
-.sidebar h3{
+aside h3{
 	font-size: 20px;
 	text-align: center;
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
 
-.sidebar li{
+aside li{
 	margin-left: 20px;
 	margin-right: 10px;
 	padding-bottom: 20px;
 }
 
-.sidebar li a{
+aside li a{
 	color: #ffffff;
 	font-size: 16px;
 	text-decoration-line: none;
@@ -178,7 +176,7 @@ header li a img{
 	/*數字凸排*/
 }
 
-/*footer*/
+/* ===== footer ===== */
 
 footer{
 	margin: 0 auto;

@@ -17,7 +17,7 @@ body{
 	width: 1200px;
 }
 
-/*menu bar*/
+/* ===== menu bar ===== */
 
 header{
 	background-color: rgba(0,0,0,.85);
@@ -61,7 +61,7 @@ header li a img{
 	height: 25px;
 	margin-top: 0;
 }
-/*player*/
+/* ===== player ===== */
 
 .player{
 	position: fixed;
@@ -75,7 +75,7 @@ header li a img{
 	width: 180px;
 }
 
-/*mv*/
+/* ===== mv ===== */
 
 .mv{
 	width: 900px;
@@ -142,7 +142,7 @@ header li a img{
 	z-index: 2;
 }
 
-/*mandarin*/
+/* ===== mandarin ===== */
 
 .mandarin{
 	margin: 0 auto;
@@ -182,7 +182,7 @@ header li a img{
 	line-height: 50px;
 }
 
-/*taiwanese*/
+/* ===== taiwanese ===== */
 
 .taiwanese{
 	margin: 0 auto;
@@ -218,7 +218,7 @@ header li a img{
 	line-height: 50px;
 }
 
-/*korean*/
+/* ===== korean ===== */
 
 .korean{
 	margin: 0 auto;
@@ -254,7 +254,7 @@ header li a img{
 	line-height: 50px;
 }
 
-/*japanese*/
+/* ===== japanese ===== */
 
 .japanese{
 	margin: 0 auto;
@@ -290,7 +290,7 @@ header li a img{
 	line-height: 50px;
 }
 
-/*western*/
+/* ===== western ===== */
 
 .western{
 	margin: 0 auto;
@@ -326,7 +326,7 @@ header li a img{
 	line-height: 50px;
 }
 
-/*western*/
+/* ===== western ===== */
 
 .children{
 	margin: 0 auto;
@@ -362,7 +362,7 @@ header li a img{
 	line-height: 50px;
 }
 
-/*footer*/
+/* ===== footer ===== */
 
 footer{
 	margin: 0 auto;

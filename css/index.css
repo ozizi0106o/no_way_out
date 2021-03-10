@@ -17,7 +17,7 @@ body{
 	width: 1200px;
 }
 
-/*menu bar*/
+/* ===== menu bar ===== */
 
 header{
 	background-color: rgba(0,0,0,.85);
@@ -62,7 +62,7 @@ header li a img{
 	margin-top: 0;
 }
 
-/*player*/
+/* ===== player ===== */
 
 .player{
 	position: fixed;
@@ -76,7 +76,7 @@ header li a img{
 	width: 180px;
 }
 
-/*ad*/
+/* ===== ad ===== */
 
 .ad_block{
 	background-image: 
@@ -102,7 +102,7 @@ header li a img{
 	padding-left: 185px;
 }
 
-/*new song*/
+/* ===== new song ===== */
 
 .new_song{
 	margin: 0 auto;
@@ -192,7 +192,7 @@ header li a img{
 	color: #ffffff;
 }
 
-/*news*/
+/* ===== news ===== */
 
 .news{
 	margin: 0 auto;
@@ -243,7 +243,7 @@ header li a img{
 	margin-bottom: 30px;
 }
 
-/*main star*/
+/* ===== main star ===== */
 
 .main_star{
 	margin: 0 auto;
@@ -279,7 +279,7 @@ header li a img{
 	padding-top: 10px;
 }
 
-/*hot mv*/
+/* ===== hot mv ===== */
 
 .hot_mv{
 	margin: 0 auto;
@@ -333,7 +333,7 @@ header li a img{
 	top: -80px;
 }
 
-/*footer*/
+/* ===== footer ===== */
 
 footer{
 	margin: 0 auto;

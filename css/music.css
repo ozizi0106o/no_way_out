@@ -8,7 +8,7 @@ body{
 	background-image: url(../img/index_bg.png);
 	background-size: cover;
 	/*放很大會重複一個背景 韓文跟括號多一種字體?*/
-	font-family: Gill Sans MT, Noto Sans;
+	font-family: Trebuchet MS, 'Noto Sans TC';
 	color: #ffffff;
 }
 
@@ -17,11 +17,15 @@ body{
 	width: 1200px;
 }
 
-/*menu bar*/
+img{
+	max-width: 100%;
+}
+
+/* ===== menu bar ===== */
 
 header{
 	background-color: rgba(0,0,0,.85);
-	position: fixed;
+	position: sticky;
 	top: 0;
 	left: 5px;
 	z-index: 3;
@@ -52,35 +56,65 @@ header li a{
 	text-decoration-line: none;
 }
 
+@media screen and (max-width: 575px){
+	header li a{
+		display: none;
+		/* :not(:last-child) 最後的搜尋要留著 */
+	}
+}
+
 header li a:hover{
-	color: #8E2FBE;
+	color: #b369d8;
 }
 
 header li a img{
-	max-width: 100%;
-	/* 圖片依舊被壓縮 */
 	width: 40px;
 	height: 25px;
 	margin-top: 0;
 }
 
-/*player*/
+header .hamburger_btn{
+	background-color: #b369d8;
+	color: #ffffff;
+	font-size: 30px;
+	border-style: none;
+	display: none;
+
+	/* position: absolute;
+	top: 35px;
+	right: calc(100vw - 10px); */
+	/* 漢堡選單的位置 怎麼移動不會亂跑 */
+	/* 改完記得修改header到離下的距離 */
+}
+
+@media screen and (max-width: 575px){
+	header .hamburger_btn{
+		display: inline-block;
+	}
+}
+
+/* ===== player ===== */
 
 .player{
 	position: fixed;
-	top: 475px;
-	right: 30px;
+	bottom: 20px;
+	right: 20px;
     z-index: 3;
     /*放很大就不見了*/
 }
 
 .player img{
-	max-width: 100%;
-	/* 圖片沒有變化 */
 	width: 180px;
 }
 
-/*type*/
+@media screen and (max-width: 575px){
+	.player img{
+		width: 100px;
+		/* 直接調整大小? 不同工具有的看不到 要怎麼調整位置 */
+	}
+}
+
+/* ===== type =====*/
 
 .type{
 	margin: 0 auto;
@@ -96,12 +130,17 @@ header li a img{
 
 .type li{
 	margin-left: 20px;
-	margin-bottom: -20px;
+	border: 2px solid palevioletred;
+}
+
+@media screen and (max-width: 575px){
+	.type li{
+		width: 100%;
+		/* li超寬>< 然後文字要怎麼移回去*/
+	}
 }
 
 .type img{
-	max-width: 100%;
-	/* 圖片沒變化 */
 	width: 320px;
 	height: 185px;
 	opacity: .7;
@@ -115,7 +154,7 @@ header li a img{
 	top: -110px;
 }
 
-/*rank*/
+/* ===== rank =====*/
 
 .rank{
 	width: 900px;
@@ -129,8 +168,6 @@ header li a img{
 }
 
 .rank img{
-	max-width: 100%;
-	/* 沒有變化 */
 	width: 100%;
 	/* 背景圖片高度沒有跟著加大 */
 	z-index: 1;
@@ -159,7 +196,7 @@ header li a img{
 	z-index: 2;
 }
 
-/*footer*/
+/* ===== footer =====*/
 
 footer{
 	width: 300px;
@@ -196,8 +233,6 @@ footer a{
 }
 
 .contact li a img{
-	max-width: 100%;
-	/* 沒有變化 */
 	width: 40px;
 }
 
@@ -208,101 +243,3 @@ footer h5{
 	margin-bottom: 20px;
 }
 
-@media screen and (max-width: 575px){
-	body{
-	  width: 100%;
-	}
-
-	.wrapper{
-		width: 100%;		
-	}
-
-	header{
-		width: 100%;
-		border: 2px solid yellow;
-		/* 直接掉到logo下一排 且字會被砍掉 搜尋圖示也不見被壓縮*/
-	}
-
-	header ul{
-		width: 100%;
-	}
-
-	header li{
-		width: 100%;
-	}
-
-	header li a{
-		width: 100%;
-	}
-
-	.player{
-		/* width: 100%; */
-		border: 3px solid pink;
-		/* 加100%跑到左邊去 而且直接貼網頁底部 圖片範圍變大*/
-	}
-
-	.type{
-		width: 100%;		
-		/* 圖片左邊空隙大於右邊 */
-	}
-
-	.type ul{
-		width: 100%;
-	}
-
-	.type li{
-		width: 100%;
-		text-align: center;
-	}
-
-	.type h2{
-		width: 100%;
-	}
-
-	.rank{
-		width: 100%;
-		margin-top: 100px;
-	}
-
-	.rank li{
-		width: 100%;
-	}
-
-	.rank h3{
-		width: 100%;
-	}
-
-	.rank p{
-		width: 100%;
-	}
-	
-	footer{
-		width: 100%;
-		border: 2px solid green;
-		/* 位置大走鐘 而且文字跟icon變成左邊對齊 設定100% li間距變很大 */
-	}
-
-	.information{
-		width: 100%;
-	}
-
-	/* .information li{
-		width: 100%;
-	} */
-
-	footer a{
-		width: 100%;
-	}
-
-	.contact{
-		width: 100%;
-	}
-
-	/* .contact li{
-		width: 100%;
-	} */
-
-	footer h5{
-		width: 100%;
-	}
-  }

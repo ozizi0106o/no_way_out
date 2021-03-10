@@ -17,7 +17,7 @@ body{
 	width: 1200px;
 }
 
-/*menu bar*/
+/* ===== menu bar ===== */
 
 header{
 	background-color: rgba(0,0,0,.85);
@@ -62,7 +62,7 @@ header li a img{
 	margin-top: 0;
 }
 
-/*player*/
+/* ===== player ===== */
 
 .player{
 	position: fixed;
@@ -76,7 +76,7 @@ header li a img{
 	width: 180px;
 }
 
-/*message bar*/
+/* ===== message bar ===== */
 
 .message_bar{
 	margin: 0 auto;
@@ -98,7 +98,7 @@ header li a img{
 	
 }
 
-/*message*/
+/* ===== message ===== */
 
 .kind{
 	margin: 0 auto;
@@ -168,7 +168,7 @@ header li a img{
 	margin-left: 10px;
 }
 
-/*footer*/
+/* ===== footer ===== */
 
 footer{
 	margin: 0 auto;
