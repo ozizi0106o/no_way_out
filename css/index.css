@@ -8,9 +8,9 @@ body{
 	background-image: url(../img/index_bg.png);
 	background-size: cover;
 	/*放很大會重複一個背景 韓文跟括號多一種字體?*/
-	font-family: Gill Sans MT, Noto Sans;
+	font-family: Trebuchet MS, 'Noto Sans TC';
 	color: #ffffff;
-;;;;;;;}
+}
 
 .wrapper{
 	margin: 0 auto;
@@ -88,7 +88,7 @@ header li a img{
 	background-size: auto, 180px 450px, 450px 300px;
 	background-color: rgba(25,25,112,1);
 	margin: 0 auto;
-	margin-top: 111px;
+	margin-top: 110px;
 	width: 736px;
 	height: 450px;
 }
@@ -333,7 +333,7 @@ header li a img{
 	top: -80px;
 }
 
-/* ===== footer ===== */
+/* ===== footer =====*/
 
 footer{
 	margin: 0 auto;

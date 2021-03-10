@@ -8,7 +8,7 @@ body{
 	background-image: url(../img/index_bg.png);
 	background-size: cover;
 	/*放很大會重複一個背景 韓文跟括號多一種字體?*/
-	font-family: Gill Sans MT, Noto Sans;
+	font-family: Trebuchet MS, 'Noto Sans TC';
 	color: #ffffff;
 }
 
