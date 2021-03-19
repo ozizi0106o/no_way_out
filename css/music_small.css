@@ -1,0 +1,56 @@
+/* 575px RWD跑掉 */
+/* ===== menu bar ===== */
+.menu_bar li{
+	margin-left: 20px;
+}
+
+.menu_bar li a{
+	font-size: 20px;
+} 
+
+.menu_bar li a img{
+	width: 30px;
+	height: 20px;
+}
+
+/* ===== player ===== */
+@media (min-width: 576px) and (max-width: 767px){
+	.player_desktop{
+		width: 160px;
+	}
+
+	.desktop .cd_rotate{
+		max-width: 70px;
+		bottom: 24px;
+	}
+	
+	.desktop .front{
+		bottom: 0;
+		left: 28px;
+	}
+
+	.desktop .play{
+		bottom: 0;
+		left: 43px;
+	}
+
+	.desktop .pause{
+		bottom: 0;
+		left: 43px;
+	}
+
+	.desktop .next{
+		bottom: 0;
+		left: 58px;
+	}
+
+	.desktop .volume{
+		bottom: 0;
+		left: 73px;
+	}
+
+	.desktop .mute{
+		bottom: 0;
+		left: 73px;
+	}
+}

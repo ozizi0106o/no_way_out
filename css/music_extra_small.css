@@ -1,0 +1,13 @@
+/* ===== menu bar ===== */
+.menu_bar .hamburger_btn{
+	display: block;
+}
+
+.menu_bar li:not(:last-child){
+	display: none;
+}	
+
+/* ===== player ===== */
+.player_desktop{
+	display: none;
+}
