@@ -14,43 +14,57 @@
 }
 
 /* ===== player ===== */
-@media (min-width: 576px) and (max-width: 767px){
-	.player_desktop{
-		width: 160px;
-	}
+.player_desktop{
+	width: 160px;
+}
 
-	.desktop .cd_rotate{
-		max-width: 70px;
-		bottom: 24px;
-	}
-	
-	.desktop .front{
-		bottom: 0;
-		left: 28px;
-	}
+.player_desktop .timebox{
+	bottom: 99px;
+}
 
-	.desktop .play{
-		bottom: 0;
-		left: 43px;
-	}
+.player_desktop .song1{
+	bottom: 128px;
+}
 
-	.desktop .pause{
-		bottom: 0;
-		left: 43px;
-	}
+.player_desktop .singer1{
+	bottom: 114px;
+}
 
-	.desktop .next{
-		bottom: 0;
-		left: 58px;
-	}
+.desktop .cd_rotate{
+	max-width: 70px;
+	bottom: 24px;
+}
 
-	.desktop .volume{
-		bottom: 0;
-		left: 73px;
-	}
+.desktop .front{
+	bottom: 0;
+	left: 28px;
+}
 
-	.desktop .mute{
-		bottom: 0;
-		left: 73px;
-	}
+.desktop .play1{
+	bottom: 0;
+	left: 43px;
+}
+
+.desktop .pause1{
+	bottom: 0;
+	left: 43px;
+}
+
+.desktop .next{
+	bottom: 0;
+	left: 58px;
+}
+
+.desktop .volume1{
+	bottom: 0;
+	left: 73px;
+}
+
+.desktop .mute1{
+	bottom: 0;
+	left: 73px;
+}
+
+.player_mobile{
+    display: none;
 }

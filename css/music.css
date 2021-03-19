@@ -48,11 +48,14 @@ header{
 	display: flex;
 	margin-top: 40px;
 	margin-right: 10px;
+	border: 2px solid red;
 }
 
-.menu_bar li{
-	margin-left: 40px;
-	position: relative;
+.menu_bar .combobox{
+	text-align: center;
+	/* margin-left: 20px; */
+	/* 均分左右的空間 不要多! */
+	border: 2px solid orange;
 }
 
 .menu_bar li a{
@@ -74,23 +77,16 @@ header{
 }
 
 .menu_bar ol{
-	width: 90px;
-	position: absolute;
-	/* left: 0; */
-	top: 35px;
-	background-color: peachpuff;
+	margin-top: 20px;
 }
 
 .menu_bar ol li{
-	border: 2px solid red;
-	/* display: block; */
+	/* display: none; */
+	/* 隱藏選單 上面的menu選項會移動位置 */
 }
 
 .menu_bar ol a{
-	/* 還不能水平 */
-	display: block;
-	text-align: center;
-	border: 2px solid pink;	
+	/* display: none; */
 }
 
 .menu_bar li a img{
@@ -140,13 +136,23 @@ header{
 	/* display: none; */
 }
 
-.player_desktop span{
+.player_desktop .song1{
 	color: #2D184B;
 	opacity: .69;
 	font-size: 16px;
+	font-weight: bold;
 	position: absolute;
-	bottom: 125px;
-	left: 16px;
+	bottom: 145px;
+	left: 18px;
+	z-index: 4;
+}
+
+.player_desktop .singer1{
+	color: #C4B4D9;
+	font-size: 12px;
+	position: absolute;
+	bottom: 130px;
+	left: 18px;
 	z-index: 4;
 }
 
@@ -188,7 +194,7 @@ header{
 	cursor: pointer;
 }
 
-.desktop .play{
+.desktop .play1{
 	max-width: 22px;
 	border: 0;
 	outline: 0;
@@ -201,7 +207,7 @@ header{
 	/* display: none; */
 }
 
-.desktop .pause{
+.desktop .pause1{
 	max-width: 22px;
 	border: 0;
 	outline: 0;
@@ -226,20 +232,7 @@ header{
 	cursor: pointer;
 }
 
-.desktop .volume{
-	max-width: 22px;
-	border: 0;
-	outline: 0;
-	background-color: transparent;
-	position: absolute;
-	bottom: 1px;
-	left: 80px;
-	z-index: 4;
-	cursor: pointer;
-	display: none;
-}
-
-.desktop .mute{
+.desktop .volume1{
 	max-width: 22px;
 	border: 0;
 	outline: 0;
@@ -252,6 +245,19 @@ header{
 	/* display: none; */
 }
 
+.desktop .mute1{
+	max-width: 22px;
+	border: 0;
+	outline: 0;
+	background-color: transparent;
+	position: absolute;
+	bottom: 1px;
+	left: 80px;
+	z-index: 4;
+	cursor: pointer;
+	display: none;
+}
+
 .desktop .volume_control{
 	width: 38px;
 	height: 20px;
@@ -260,6 +266,50 @@ header{
 	position: absolute;
 	bottom: 9px;
 	left: 100px;
+	z-index: 4;
+}
+
+.player_mobile{
+	background-color: rgba(179,105,216,.90);
+	width: 100%;	
+	position: fixed;
+	bottom: 0;
+	left: 0;
+    z-index: 3;
+	border: 2px solid red;
+}
+
+.mobile{
+	position: relative;
+}
+
+.mobile .album{
+	max-width: 120px;
+	margin: 15px 15px;
+	box-shadow: 0px 0px 5px #000000;
+}
+
+.mobile .album img{
+	display: block;
+}
+
+.player_mobile .song2{
+	color: #FFFFFF;
+	text-shadow: 3px 3px 3px #000000;
+	font-size: 20px;
+	font-weight: bold;
+	position: absolute;
+	bottom: 35px;
+	left: 160px;
+	z-index: 4;
+}
+
+.player_mobile .singer2{
+	color: rgba(255,255,255,.80);
+	font-size: 14px;
+	position: absolute;
+	bottom: 15px;
+	left: 160px;
 	z-index: 4;
 }
 
