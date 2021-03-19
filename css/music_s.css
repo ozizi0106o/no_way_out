@@ -1,0 +1,75 @@
+@media(min-width: 576px) and (max-width: 767px){
+	
+	/* 575px RWD跑掉 */
+	/* ===== menu bar ===== */
+	.menu_bar li{
+		margin-left: 20px;
+	}
+
+	.menu_bar li a{
+		font-size: 20px;
+	} 
+
+	.menu_bar li a img{
+		width: 30px;
+		height: 20px;
+	}
+
+	/* ===== player ===== */
+	.player_desktop{
+		width: 160px;
+	}
+
+	.player_desktop .timebox{
+		bottom: 99px;
+	}
+
+	.player_desktop .song1{
+		bottom: 128px;
+	}
+
+	.player_desktop .singer1{
+		bottom: 114px;
+	}
+
+	.desktop .cd_rotate{
+		max-width: 70px;
+		bottom: 24px;
+	}
+
+	.desktop .front{
+		bottom: 0;
+		left: 28px;
+	}
+
+	.desktop .play1{
+		bottom: 0;
+		left: 43px;
+	}
+
+	.desktop .pause1{
+		bottom: 0;
+		left: 43px;
+	}
+
+	.desktop .next{
+		bottom: 0;
+		left: 58px;
+	}
+
+	.desktop .volume1{
+		bottom: 0;
+		left: 73px;
+	}
+
+	.desktop .mute1{
+		bottom: 0;
+		left: 73px;
+	}
+
+	.player_mobile{
+		display: none;
+	}
+
+}
+
