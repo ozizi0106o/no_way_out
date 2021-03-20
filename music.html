@@ -12,7 +12,7 @@
 </head>
 
 <body>
-	
+
 	<!-- ===== menu bar ===== -->	
 	<header>
 		<div class="menu_bar">
@@ -91,9 +91,10 @@
 				<!-- 還有歌曲長度跟時間的線跟圓形  -->
 				<img src="img/player_box.png" alt="" class="playbox">
 				<img src="img/player_cd.png" alt="" class="cd_rotate">
+				<audio src="fall_in_you.mp3" id="audio"></audio>
 				<button class="front"><img src="img/player_backward.png" alt=""></button>
-				<button class="play1"><img src="img/player_play.png" alt=""></button>
-				<button class="pause1"><img src="img/player_pause.png" alt=""></button>
+				<button class="play1" onclick="autoPlay()"><img src="img/player_play.png" alt=""></button>
+				<button class="pause1" onclick="closePlay()"><img src="img/player_pause.png" alt=""></button>
 				<button class="next"><img src="img/player_forward.png" alt=""></button>
 				<button class="volume1"><img src="img/player_volume.png" alt=""></button>
 				<button class="mute1"><img src="img/player_mute.png" alt=""></button>
@@ -195,6 +196,29 @@
 			</ul>
 			<h5>2021 Tibame 前端班學生網站製作用</h5>
 		</footer>
+
+		<script>
+			function autoPlay(){
+				var Auto = document.getElementById("audio");
+				Auto.play();
+			}
+
+			// var play1 = document.getElementsByClassName("play1");
+			// play1.addEventListener("focus", function(){
+			// 	this.closest("pause1").classList.toggle("pause1");
+			// });
+
+
+			
+
+			// function closePlay(){
+			// 	var Auto = document.getElementById("audio");
+			// 	Auto.pause();
+			// 	Auto.load();
+			// }
+
+
+		</script>
 
 </body>
 </html>
