@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="css/music_m.css">
 	<link rel="stylesheet" href="css/music_s.css">
 	<link rel="stylesheet" href="css/music_es.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
 	<title>No Way Out</title>
 </head>
 
@@ -93,12 +94,12 @@
 				<img src="img/player_cd.png" alt="" class="cd_rotate">
 				<audio src="fall_in_you.mp3" id="audio"></audio>
 				<button class="front"><img src="img/player_backward.png" alt=""></button>
-				<button class="play1" onclick="autoPlay()"><img src="img/player_play.png" alt=""></button>
-				<button class="pause1" onclick="closePlay()"><img src="img/player_pause.png" alt=""></button>
+				<button class="play1" onclick="autoPlay1()"><img src="img/player_play.png" alt=""></button>
+				<button class="pause1" onclick="closePlay1()"><img src="img/player_pause.png" alt=""></button>
 				<button class="next"><img src="img/player_forward.png" alt=""></button>
 				<button class="volume1"><img src="img/player_volume.png" alt=""></button>
 				<button class="mute1"><img src="img/player_mute.png" alt=""></button>
-				<div class="volume_control"></div>
+			
 				<!-- 還有音量大小的線跟圓形 -->				
 			</div>						
 		</div>
@@ -110,15 +111,16 @@
 				</div>
 				<span class="song2">Fall in you</span>
 				<span class="singer2">Ha Sung Woon</span>
-				<button class="play2"><img src="img/player_play.png" alt=""></button>
-				<button class="pause2"><img src="img/player_pause.png" alt=""></button>
-				<button class="volume2"><img src="img/player_volume.png" alt=""></button>
-				<button class="mute2"><img src="img/player_mute.png" alt=""></button>
+				<button class="play2" onclick="autoPlay2()"><img src="img/mobile_play.png" alt=""></button>
+				<button class="pause2" onclick="closePlay2()"><img src="img/mobile_pause.png" alt=""></button>
+				<button class="volume2"><img src="img/mobile_volume.png" alt=""></button>
+				<button class="mute2"><img src="img/mobile_mute.png" alt=""></button>
 			</div>
 		</div>
 
 		<!-- ===== type ===== -->
-		<div class="type">									
+		<div class="type">
+			<input type="range" class="volume_line" min="0" max="1" step="0.05" value="1">									
 			<ul>
 				<li>
 				    <img src="img/music_type1.jpg" alt="">	
@@ -197,28 +199,7 @@
 			<h5>2021 Tibame 前端班學生網站製作用</h5>
 		</footer>
 
-		<script>
-			function autoPlay(){
-				var Auto = document.getElementById("audio");
-				Auto.play();
-			}
-
-			// var play1 = document.getElementsByClassName("play1");
-			// play1.addEventListener("focus", function(){
-			// 	this.closest("pause1").classList.toggle("pause1");
-			// });
-
-
-			
-
-			// function closePlay(){
-			// 	var Auto = document.getElementById("audio");
-			// 	Auto.pause();
-			// 	Auto.load();
-			// }
-
-
-		</script>
+		<script src="js/music.js"></script>
 
 </body>
 </html>

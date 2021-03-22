@@ -59,7 +59,6 @@ header{
 	color: #ffffff;
 	font-size: 25px;
 	text-decoration-line: none;
-	display: block;
 } 
 
 .menu_bar li a:hover{ 
@@ -74,6 +73,13 @@ header{
 	transition: .2s ease-out;
 }
 
+.menu_bar li:hover .triangle{
+	display: block;
+	/* transition: 3s linear;
+	opacity: 1; */
+	/* 動畫怎麼慢慢出現 */
+}
+
 .triangle{
 	width: 0;
 	height: 0;
@@ -82,20 +88,26 @@ header{
 	border-width: 0 8px 10px;
 	border-style: solid;
 	border-color: transparent transparent #ffffff;
+	display: none;
 }	
+
+.menu_bar li:hover ol{
+	display: block;
+	/* transition: 3s linear;
+	opacity: 1; */
+	/* 動畫怎麼慢慢出現 */
+}
 
 .menu_bar ol{
 	background-color: #ffffff;
 	border-radius: 10%;
 	/* 不同欄位的圓角因長寬長不一樣... */
+	display: none;
 }
-
-
 
 .menu_bar ol li{
 	padding: 10px;
-	/* display: none; */
-	/* 隱藏選單 上面的menu選項會移動位置 且message左右的選項留邊較寬*/
+	/* 隱藏選單 上面的menu選項會移動位置 且message左右的選項留邊較寬 還會亂跑*/
 }
 
 .menu_bar ol a{
@@ -227,11 +239,11 @@ header{
 	outline: 0;
 	background-color: transparent;
 	position: absolute;
-	bottom: 1px;
+	bottom: 11px;
 	left: 50px;
 	z-index: 4;
 	cursor: pointer;
-	display: none;
+	/* display: none; */
 }
 
 .desktop .next{
@@ -272,16 +284,50 @@ header{
 	display: none;
 }
 
-.desktop .volume_control{
-	width: 38px;
-	height: 20px;
-	background-color: transparent;
-	/* 線的顏色呢QQ */
-	position: absolute;
-	bottom: 9px;
-	left: 100px;
-	z-index: 4;
-}
+/* .volume_line{ */
+	/* width: 50px; */
+	/* height: 50px; */
+	/* -webkit-appearance: none; */
+	/* background-color: teal; */
+	/* background-color: transparent; */
+	/* outline: tomato; */
+  	/* overflow:hidden;      */
+
+  	/* outline : none;      避免點選會有藍線或虛線 */
+  	/* background:none; */
+	/* position: absolute; */
+	/* bottom: 9px; */
+	/* left: 100px; */
+	/* z-index: 4; */
+/* } */
+
+input[type="range"]{
+	-webkit-appearance: none;
+	/* overflow:hidden;     限定範圍 */
+	width:50px;
+	height:10px;
+	outline : none;      
+	background:none;
+	/* background-color: violet; */
+  }
+
+  input[type="range"]::-webkit-slider-thumb{
+	-webkit-appearance: none;
+	position: relative;    /* 設為相對位置，為了前後區塊的絕對位置而設定 */
+	width:10px;
+	height:10px;
+	background: #8E57B9;
+	border-radius:50%;
+  }
+
+  
+
+
+
+
+
+
+
 
 .player_mobile{
 	background-color: rgba(179,105,216,.90);
