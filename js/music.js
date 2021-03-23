@@ -2,6 +2,15 @@
 function autoPlay1(){
     var play1 = document.getElementById("audio");
     play1.play();
+
+    // var play1 = document.getElementsByClassName("play1");
+    // play1.addEventListener("click", function(){
+
+    //     var pause1 = document.getElementsByClassName("pause1");
+    //     pause1.classList.toggle(".desktop .play1.off1");
+    // });
+
+    // 跑出一個不知道甚麼錯的ico
 }			
 
 function closePlay1(){
@@ -22,26 +31,6 @@ function closePlay2(){
     // Auto.load();
 }
 
-// function updateButton() {
-// const icon = this.paused ? 'play1' : 'pause1';
-// console.log(icon);
-// toggle.textContent = icon;
 
-// var btn1 = document.getElementById("btn1");
-// play1.addEventListener("click", function(){ // click 事件綁定
-// let pause1 = document.getElementsByClassName("pause1")[0];
-// console.log(pause1.innerHTML);
-// });			
 
-// play1.addEventListener("click", () => {
-// 	pause1.onclick();
-// });
 
-// pause1.addEventListener("click", function(){
-// 	play1.onclick();
-// });
-
-// var play1 = document.getElementsByClassName("play1");
-// play1.addEventListener("focus", function(){
-// 	this.closest("pause1").classList.toggle("pause1");
-// });

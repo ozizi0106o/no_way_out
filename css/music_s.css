@@ -77,6 +77,12 @@
 		display: none;
 	}
 
+	/* ===== type ===== */
+	.type li{
+		width: 45%;
+	}
+
+	/* ===== rank ===== */
 	.rank li h3{
 		font-size: 25px;
 	}

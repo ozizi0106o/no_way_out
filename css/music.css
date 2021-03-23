@@ -106,6 +106,8 @@ header{
 
 .menu_bar ol li{
 	padding: 10px;
+	/* 隨著RWD縮放 文字排列會跑版 */
+	border: 2px solid red;
 }
 
 .menu_bar ol a{
@@ -130,7 +132,7 @@ header{
 	right: 55px;
 }
 
-.menu_ham .hamburger_btn{ 
+/* .menu_ham .hamburger_btn{ 
 	background-color: #b369d8;
 	color: #ffffff;
 	font-size: 25px;
@@ -141,6 +143,64 @@ header{
 	top: 35px;
 	right: 10px;
 	cursor: pointer;
+} */
+
+.menu_ham label{
+	background-color: #b369d8;
+	color: #ffffff;
+	font-size: 25px;
+	border: 0;
+	outline: 0;
+	/* display: none; */
+	padding: 6px;
+	position: absolute;
+	top: 34px;
+	right: 10px;
+	cursor: pointer;
+}
+
+.menu_ham input{
+	position: absolute;
+	top: 0;
+	right: 0;
+	/* display: none; */
+}
+
+.menu_ham ul{
+	background-color: #ffffff;
+	display: inline-block;
+	position: absolute;
+	top: -6px;
+	/* 用到負值感覺怪怪的 */
+	right: 35px;
+	border: 1px dashed #2D184B;
+	box-shadow: 3px 3px 0px #b369d8;
+}
+
+.menu_ham ul .block{	
+	text-align: center;
+	border-bottom: 1px dashed #2D184B;
+	padding: 15px;	
+	/* RWD 寬度小於575不見 */
+}
+
+.menu_ham ul .block a{
+	color: #b369d8;
+	font-size: 20px;
+	text-decoration-line: none;
+	/* position: absolute; */
+	/* top: 0; */
+}
+
+.menu_ham ul .block ol{
+	border: 2px solid fuchsia;
+	/* max-width: ; */
+	/* 文字斷行到下面去了 */
+}
+
+.menu_ham .block ol li a{
+	font-size: 16px;
+	display: block;
 }
 
 /* ===== main ===== */
@@ -156,8 +216,6 @@ header{
 	bottom: 20px;
 	right: 20px;
     z-index: 3;
-	border: 3px solid red;
-	/* 框框被擠壓了 */
 }
 
 .desktop{
@@ -208,10 +266,9 @@ header{
 	bottom: 27px;
 	right: 10px;
 	z-index: 3;
-	/* animation: cd 2.5s linear normal infinite; */
 }
 
-.desktop .cd_rotate.play000{
+.desktop .cd_rotate.turn1{
 	animation: cd 2.5s linear normal infinite;
 }
 
@@ -250,7 +307,7 @@ header{
 	cursor: pointer;
 }
 
-.desktop .play1.pause1{
+.desktop .play1.off1{
 	display: none;
 }
 
@@ -260,14 +317,14 @@ header{
 	outline: 0;
 	background-color: transparent;
 	position: absolute;
-	bottom: 11px;
+	bottom: 1px;
 	left: 50px;
 	z-index: 4;
 	cursor: pointer;
 	display: none;	
 }
 
-.desktop .pause1.play1{
+.desktop .pause1.turn2{
 	display: inline-block;
 }
 
@@ -343,8 +400,8 @@ input[type="range"].desktop_line::-webkit-slider-thumb{
 	background: #8E57B9;
 	border-radius: 50%;
 	/* box-shadow: -100vw 0 0 100vw #46299D; */
+	/* 拉過去變色改不了高度 一改就壓縮到圈圈 */
 	margin-top: -3px;
-	/* 拉過去變色改不了 上面改高度 就壓縮到圈圈 */
 }
 
 .player_mobile{
@@ -393,20 +450,20 @@ input[type="range"].desktop_line::-webkit-slider-thumb{
 /* ===== type =====*/
 .type{
 	max-width: 90%;
-	margin: 0 auto;	
+	margin: 0 auto;
+	margin-top: 20px;
 }
 
 .type ul{
 	display: flex;
 	flex-wrap: wrap;
-	border: 2px solid pink;
-	/* w1042掉下去 怎麼調整中間太寬間距 */
 }
 
 .type li{
 	margin: 0 auto;	
-	border: 2px solid green;
 	width: 30%;
+	margin-bottom: 30px;
+	position: relative;
 }
 
 .type li a{
@@ -420,10 +477,7 @@ input[type="range"].desktop_line::-webkit-slider-thumb{
 }
 
 .type li a img{
-	/* width: 308px; */
 	width: 100%;
-	/* height: 185px; */
-	object-fit: cover;
 	opacity: .7;
 }
 
@@ -431,8 +485,9 @@ input[type="range"].desktop_line::-webkit-slider-thumb{
 	color: #ffffff;
 	font-size: 40px;
 	text-align: center;
-	position: relative;
-	top: -110px;
+	position: absolute;
+	top: calc((100% - 40px) / 2);
+	left: calc((100% - 85px) / 2);
 }
 
 /* ===== rank =====*/
@@ -440,7 +495,7 @@ input[type="range"].desktop_line::-webkit-slider-thumb{
 .rank{
 	max-width: 90%;
 	margin: 0 auto;
-	margin-top: 30px;
+	margin-top: 10px;
 }
 
 .rank li{

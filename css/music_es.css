@@ -9,9 +9,9 @@
 		display: block;
 	}
 
-	.menu_ham .hamburger_btn{
+	/* .menu_ham .hamburger_btn{
 		display: block;
-	}
+	} */
 
 	/* ===== player ===== */
 	.player_desktop{
@@ -70,6 +70,12 @@
 		display: none;
 	}
 
+	/* ===== type ===== */
+	.type li{
+		width: 80%;
+	}
+
+	/* ===== rank ===== */
 	.rank li h3{
 		font-size: 25px;
 	}
