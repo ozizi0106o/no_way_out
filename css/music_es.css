@@ -1,17 +1,17 @@
 @media(max-width: 575px){
 
 	/* ===== menu bar ===== */
-	.menu_bar li a img{
-		margin-right: 45px;
+	.menu_bar li{
+		display: none;
 	}
 
-	.menu_bar .hamburger_btn{
+	.menu_ham a img{
 		display: block;
 	}
 
-	.menu_bar li:not(:last-child){
-		display: none;
-	}	
+	.menu_ham .hamburger_btn{
+		display: block;
+	}
 
 	/* ===== player ===== */
 	.player_desktop{
