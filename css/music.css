@@ -188,14 +188,14 @@ header{
 	color: #b369d8;
 	font-size: 20px;
 	text-decoration-line: none;
-	/* position: absolute; */
-	/* top: 0; */
 }
 
 .menu_ham ul .block ol{
+	/* 想要做往下延伸的選單 */
+	position: absolute;
+	top: 0;
+	right: 110px;
 	border: 2px solid fuchsia;
-	/* max-width: ; */
-	/* 文字斷行到下面去了 */
 }
 
 .menu_ham .block ol li a{
