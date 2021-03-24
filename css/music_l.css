@@ -1,9 +1,13 @@
 @media(min-width: 1200px){
 
+    /* ===== menu bar ===== */
+    .menu_ham{
+        display: none;
+    }
+
     /* ===== player ===== */
     .player_mobile{
         display: none;
     }
-    
 }
 

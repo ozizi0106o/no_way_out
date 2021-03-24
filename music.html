@@ -22,8 +22,7 @@
 				<li class="combobox">
 					<a href="music.html">Music</a>
 					<ol>
-					<div class="triangle"></div>
-
+						<div class="triangle"></div>
 						<li><a href="#">華語</a></li>
 						<li><a href="#">台語</a></li>
 						<li><a href="#">韓語</a></li>
@@ -34,18 +33,18 @@
 				</li>
 
 				<li class="combobox">
-					<a href="news.html">News</a>
-					<div class="triangle"></div>
+					<a href="news.html">News</a>					
 					<ol>
+						<div class="triangle"></div>
 						<li><a href="#">最新消息</a></li>
 						<li><a href="#">熱門消息</a></li>
 					</ol>
 				</li>
 
 				<li class="combobox">
-					<a href="video.html">Video</a>
-					<div class="triangle"></div>
+					<a href="video.html">Video</a>					
 					<ol>
+						<div class="triangle"></div>
 						<li><a href="#">華語</a></li>
 						<li><a href="#">台語</a></li>
 						<li><a href="#">韓語</a></li>
@@ -56,80 +55,80 @@
 				</li>
 
 				<li class="combobox">
-					<a href="message.html">Message</a>
-					<div class="triangle"></div>
+					<a href="message.html">Message</a>					
 					<ol>
+						<div class="triangle"></div>
 						<li><a href="#">熱門</a></li>
 						<li><a href="#">最新</a></li>
 					</ol>				
 				</li>
 
 				<li class="combobox">
-					<a href="#">Login</a>
-					<div class="triangle"></div>
+					<a href="login.html">Login</a>					
 					<ol>
+						<div class="triangle"></div>
 						<li><a href="#">註冊</a></li>
 						<li><a href="#">登入</a></li>
 					</ol>
 				</li>
 
 				<li class="combobox">
-					<a href="#"><img src="img/search_btn.png" alt=""></a>
+					<a href="search.html"><img src="img/search_btn.png" alt=""></a>
 				</li>
 			</ul>
 
 			<div class="menu_ham">
 				<a href="#"><img src="img/search_btn.png" alt=""></a>
-				<!-- <button class="hamburger_btn">☰</button> -->
 				<label for="burger">☰</label>
 				<input type="checkbox" id="burger">
 				<ul>
 					<li class="block">
 						<a href="music.html">Music</a>
-						<ol>
+						<!-- <ol>
 							<li><a href="#">華語</a></li>
 							<li><a href="#">台語</a></li>
 							<li><a href="#">韓語</a></li>
 							<li><a href="#">日語</a></li>
 							<li><a href="#">西洋</a></li>
 							<li><a href="#">兒童</a></li>
-						</ol>
+						</ol> -->
+						<!-- 想做下拉式子選單 -->
 					</li>
 
 					<li class="block">
 						<a href="news.html">News</a>
-						<ol>
+						<!-- <ol>
 							<li><a href="#">最新消息</a></li>
 							<li><a href="#">熱門消息</a></li>
-						</ol>
+						</ol> -->
 					</li>
 
 					<li class="block">
 						<a href="video.html">Video</a>
-						<ol>
+						<!-- <ol>
 							<li><a href="#">華語</a></li>
 							<li><a href="#">台語</a></li>
 							<li><a href="#">韓語</a></li>
 							<li><a href="#">日語</a></li>
 							<li><a href="#">西洋</a></li>
 							<li><a href="#">兒童</a></li>
-						</ol>				
+						</ol>				 -->
 					</li>
 
 					<li class="block">
 						<a href="message.html">Message</a>
-						<ol>
+						<!-- <ol>
 							<li><a href="#">熱門</a></li>
 							<li><a href="#">最新</a></li>
-						</ol>				
+						</ol>				 -->
 					</li>
 
 					<li class="block">
 						<a href="#">Login</a>
-						<ol>
+						<!-- <ol>
 							<li><a href="#">註冊</a></li>
 							<li><a href="#">登入</a></li>
-						</ol>
+						</ol> -->
 					</li>
 				</ul>
 			</div>			
@@ -151,15 +150,19 @@
 
 				<!-- ===== 播放面板 ===== -->
 				<img src="img/player_box.png" alt="" class="playbox">
-				<img src="img/player_cd.png" alt="" class="cd_rotate">
+				<img src="img/player_cd.png" alt="" class="cd_rotate" id="cd">
 				<audio src="fall_in_you.mp3" id="audio"></audio>
 				<button class="front"><img src="img/player_backward.png" alt=""></button>
+				<!-- 往前一首還沒寫出來 -->
 				<button class="play1 show" onclick="autoPlay1()" id="playbtn1"><img src="img/player_play.png" alt=""></button>
 				<button class="pause1" onclick="closePlay1()"  id="pausebtn1"><img src="img/player_pause.png" alt=""></button>
 				<button class="next"><img src="img/player_forward.png" alt=""></button>
-				<button class="volume1"><img src="img/player_volume.png" alt=""></button>
-				<button class="mute1"><img src="img/player_mute.png" alt=""></button>
-				<input type="range" class="desktop_line" min="0" max="1" step="0.05" value="1">			
+				<!-- 下一首還沒寫出來 -->
+				<button class="volume1 show" onclick="autoVolume1()" id="volumebtn1"><img src="img/player_volume.png" alt=""></button>
+				<button class="mute1" onclick="closeMute1()" id="mutebtn1"><img src="img/player_mute.png" alt=""></button>
+				<!-- 靜音還沒寫出來 -->
+				<input type="range" class="desktop_line" min="0" max="1" step="0.05" value="1">	
+				<!-- 控制音量還沒寫 -->
 			</div>						
 		</div>
 
@@ -174,6 +177,7 @@
 				<button class="pause2" onclick="closePlay2()" id="pausebtn2"><img src="img/mobile_pause.png" alt=""></button>
 				<button class="volume2"><img src="img/mobile_volume.png" alt=""></button>
 				<button class="mute2"><img src="img/mobile_mute.png" alt=""></button>
+				<input type="range" class="mobile_line" min="0" max="1" step="0.05" value="1">	
 			</div>
 		</div>
 
@@ -273,15 +277,9 @@
 			<h5>2021 Tibame 前端班學生網站製作用</h5>
 		</footer>
 
-		<script src="js/music.js"></script>
-		<script>
-			// var ham = new TimelineMax();
-			// ham.to(".hamburger_btn")
-			// document.getElementsByClassName("hamburger_btn").onmouseover = function(){
-			// 	ham.play();
+	</div>
 
-			// }
-		</script>
+	<script src="js/music.js"></script>
 
 </body>
 </html>

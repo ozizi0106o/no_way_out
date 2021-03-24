@@ -75,26 +75,6 @@ header{
 	transition: .2s ease-out;
 }
 
-.menu_bar li:hover .triangle{
-	display: block;
-}
-
-.triangle{
-	width: 0;
-	height: 0;
-	border-width: 0 8px 10px;
-	border-style: solid;
-	border-color: transparent transparent #ffffff;
-	position: absolute;
-	top: 30px;
-	left: calc((100% - 10px) / 2);
-	display: none;
-}	
-
-.menu_bar li:hover ol{
-	display: block;
-}
-
 .menu_bar ol{
 	background-color: #ffffff;
 	border-radius: 10px;
@@ -104,15 +84,36 @@ header{
 	display: none;
 }
 
+.menu_bar li:hover ol{
+	display: block;
+}
+
+.menu_bar ol .triangle{
+	width: 0;
+	height: 0;
+	border-width: 0 8px 10px;
+	border-style: solid;
+	border-color: transparent transparent #ffffff;
+	position: absolute;
+	bottom: 100%;
+	/* 筆記：從最下面開始算 扣除跑出來的東西 */
+	left: 50%;
+	transform: translateX(-50%);
+	display: none;
+}
+
+.menu_bar li:hover ol .triangle{
+	display: block;
+}
+
 .menu_bar ol li{
 	padding: 10px;
-	/* 隨著RWD縮放 文字排列會跑版 */
-	border: 2px solid red;
 }
 
 .menu_bar ol a{
 	color: #1C1C1C;
 	font-size: 18px;
+	white-space: nowrap;
 }
 
 .menu_bar li a img{
@@ -131,19 +132,6 @@ header{
 	top: 40px;
 	right: 55px;
 }
-
-/* .menu_ham .hamburger_btn{ 
-	background-color: #b369d8;
-	color: #ffffff;
-	font-size: 25px;
-	border: 0;
-	outline: 0;
-	display: none;
-	position: absolute;
-	top: 35px;
-	right: 10px;
-	cursor: pointer;
-} */
 
 .menu_ham label{
 	background-color: #b369d8;
@@ -312,8 +300,9 @@ input[type="range"].timeline::-webkit-slider-thumb{
 	z-index: 3;
 }
 
-.desktop .cd_rotate.turn1{
+.desktop .cd_rotate.show{
 	animation: cd 2.5s linear normal infinite;
+	/* 暫停動畫 重放會從起始點開始 不會從暫停的地方@@ */
 }
 
 @keyframes cd{
@@ -323,7 +312,6 @@ input[type="range"].timeline::-webkit-slider-thumb{
 	100%{
 		transform: rotate(360deg);
 	}
-	/* 點播放才觸發 暫停要停止 */
 }
 
 .desktop .front{
@@ -415,6 +403,14 @@ input[type="range"].timeline::-webkit-slider-thumb{
 }
 /* 欠靜音 */
 
+/* .desktop .volume1,.desktop .mute1{
+	display: none;
+}
+
+.desktop .volume1.show,.desktop .mute1.show{
+  display: block;
+} */
+
 /* 音量線整體區塊 */
 input[type="range"].desktop_line{ 
 	-webkit-appearance: none;
@@ -453,7 +449,8 @@ input[type="range"].desktop_line::-webkit-slider-thumb{
 /* ===== mobile ===== */
 .player_mobile{
 	background-color: rgba(179,105,216,.90);
-	width: 100%;	
+	/* 背景跑掉了 沒有整個包住 */
+	width: 100%;
 	position: fixed;
 	bottom: 0;
 	left: 0;
@@ -466,8 +463,10 @@ input[type="range"].desktop_line::-webkit-slider-thumb{
 
 .mobile .album{
 	max-width: 120px;
-	margin: 15px 15px;
 	box-shadow: 0px 0px 5px #000000;
+	position: absolute;
+	bottom: 15px;
+	left: 15px;
 }
 
 .mobile .album img{
@@ -494,12 +493,99 @@ input[type="range"].desktop_line::-webkit-slider-thumb{
 	z-index: 4;
 }
 
+.mobile .play2{
+	max-width: 30px;
+	border: 0;
+	outline: 0;
+	background-color: transparent;
+	position: absolute;
+	bottom: 20px;
+	left: 300px;
+	z-index: 4;
+	cursor: pointer;
+}
+
+.mobile .pause2{
+	max-width: 30px;
+	border: 0;
+	outline: 0;
+	background-color: transparent;
+	position: absolute;
+	bottom:20px;
+	left: 300px;
+	z-index: 4;
+	cursor: pointer;
+}
+
 .mobile .play2,.mobile .pause2{
 	display: none;
 }
 
 .mobile .play2.show,.mobile .pause2.show{
   display: block;
+}
+/* 從大螢幕 拉到小螢幕的RWD 按鈕不會跟著變換 */
+
+.mobile .volume2{
+	max-width: 30px;
+	border: 0;
+	outline: 0;
+	background-color: transparent;
+	position: absolute;
+	bottom: 20px;
+	left: 330px;
+	z-index: 4;
+	cursor: pointer;
+	/* display: none; */
+}
+
+.mobile .mute2{
+	max-width: 30px;
+	border: 0;
+	outline: 0;
+	background-color: transparent;
+	position: absolute;
+	bottom: 20px;
+	left: 330px;
+	z-index: 4;
+	cursor: pointer;
+	display: none;
+}	
+
+/* 音量線整體區塊 */
+input[type="range"].mobile_line{ 
+	-webkit-appearance: none;
+	overflow: hidden;    
+	width: 110px;
+	/* 螢幕更小 線可能跑出去 */
+	height: 15px;
+	outline : none;      
+	background: none;
+	cursor: pointer;
+	z-index: 5;
+	margin-left: 360px ;
+	margin-bottom: 25px;
+}
+
+/* 音量線 */
+input[type="range"].mobile_line::-webkit-slider-runnable-track{
+	background-color: #C7B8DB;
+	height: 3px;
+	border-radius: 10px;
+	z-index: 5;
+}
+
+/* 調整音量的圓點及音軌 */
+input[type="range"].mobile_line::-webkit-slider-thumb{
+	-webkit-appearance: none;
+	position: relative;
+	width: 10px;
+	height: 10px;
+	background: #8E57B9;
+	border-radius: 50%;
+	/* box-shadow: -100vw 0 0 100vw #46299D; */
+	/* 拉過去變色改不了高度 一改就壓縮到圈圈 */
+	margin-top: -3px;
 }
 
 /* ===== type =====*/

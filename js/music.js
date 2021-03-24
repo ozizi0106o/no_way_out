@@ -1,6 +1,9 @@
 // ===== desktop ===== //
+const cd = document.getElementById("cd");
 const playbtn1 = document.getElementById("playbtn1");
 const pausebtn1 = document.getElementById("pausebtn1");
+// const volumebtn1 = document.getElementById("volumebtn1");
+// const mute1btn1 = document.getElementById("mutebtn1");
 const timebox_btn = document.getElementById("timebox_btn");
 const desktop_song1 = document.getElementById("desktop_song1");
 const desktop_singer1 = document.getElementById("desktop_singer1");
@@ -12,6 +15,7 @@ function autoPlay1(){
     play1.play();
 
     // ===== 點擊播放 切換版面和按鈕 ===== //
+    cd.classList.add("show");
     pausebtn1.classList.add("show");
     playbtn1.classList.remove("show");
     timebox_btn.classList.add("show");
@@ -30,6 +34,7 @@ function closePlay1(){
     // 上面的循環播放btn有bug
 
     // ===== 點擊暫停 切換版面和按鈕 ===== //
+    cd.classList.remove("show");
     pausebtn1.classList.remove("show");
     playbtn1.classList.add("show");
     timebox_btn.classList.remove("show");
@@ -37,6 +42,24 @@ function closePlay1(){
     desktop_singer1.classList.remove("show");
     timeline_btn.classList.remove("show");
 }
+
+// function autoVolume1(){
+//     ====== 點擊聲音 有音樂 ===== 
+//     var 
+//     還沒寫出來
+//     volumebtn1.classList.add("show");
+//     mute1btn1.classList.remove("show");
+// }
+
+// function autoMute1(){
+//     ====== 點擊靜音 沒有音樂 ===== 
+//     var 
+//     還沒寫出來
+//     volumebtn1.classList.remove("show");
+//     mute1btn1.classList.add("show");
+// }
+
+
 
 // ===== mobile ===== //
 const playbtn2 = document.getElementById("playbtn2");

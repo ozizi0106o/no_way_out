@@ -9,66 +9,19 @@
 		display: block;
 	}
 
-	/* .menu_ham .hamburger_btn{
+	.menu_ham label{
 		display: block;
-	} */
+	}
+
+	.menu_ham input{
+		display: none;
+	}
+	/* 選單變很小 跑不出來 */
 
 	/* ===== player ===== */
 	.player_desktop{
 		display: none;
-	}
-
-	.mobile .play2{
-		max-width: 30px;
-		border: 0;
-		outline: 0;
-		background-color: transparent;
-		position: absolute;
-		bottom: 20px;
-		left: 300px;
-		z-index: 4;
-		cursor: pointer;
-		/* display: none; */
-	}
-	
-	.mobile .pause2{
-		max-width: 30px;
-		border: 0;
-		outline: 0;
-		background-color: transparent;
-		position: absolute;
-		bottom: 50px;
-		left: 300px;
-		z-index: 4;
-		cursor: pointer;
-		/* display: none; */
-	}
-
-	.mobile .volume2{
-		max-width: 30px;
-		border: 0;
-		outline: 0;
-		background-color: transparent;
-		position: absolute;
-		bottom: 20px;
-		left: 330px;
-		z-index: 4;
-		cursor: pointer;
-		/* display: none; */
-	}
-	
-	.mobile .mute2{
-		max-width: 30px;
-		border: 0;
-		outline: 0;
-		background-color: transparent;
-		position: absolute;
-		bottom: 20px;
-		left: 330px;
-		z-index: 4;
-		cursor: pointer;
-		display: none;
-	}
+	}	
 
 	/* ===== type ===== */
 	.type li{
