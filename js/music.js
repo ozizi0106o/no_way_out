@@ -1,11 +1,3 @@
-// const burger = document.getElementById("burger");
-// function checkbox(){
-//     burger.classList.add("show");
-// }
-
-
-
-
 // ===== desktop ===== //
 const cd = document.getElementById("cd");
 const playbtn1 = document.getElementById("playbtn1");

@@ -3,6 +3,10 @@
 	/* 575px RWD跑掉 */
 	
 	/* ===== menu bar ===== */
+	.menu_bar .combobox{
+		margin-left: 23px;
+	}
+	
 	.menu_bar li a{
 		font-size: 20px;
 	} 
