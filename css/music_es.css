@@ -1,7 +1,21 @@
 @media(max-width: 575px){
 
 	/* ===== menu bar ===== */
-	.menu_bar li{
+
+	/* 筆記：點擊這兩個class 需要隱藏起來 */
+	/* .menu_bar ul{
+		display: none;
+	} */
+
+	/* 筆記：當show出現的時候 需要出現這個按鈕 */
+	/* .menu_ham input.show{
+	display: block;
+	} */
+
+
+
+
+	.menu_bar ul{
 		display: none;
 	}
 

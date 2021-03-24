@@ -22,8 +22,6 @@ function autoPlay1(){
     desktop_song1.classList.add("show");
     desktop_singer1.classList.add("show");
     timeline_btn.classList.add("show");
-
-    // 跑出一個不知道甚麼錯的ico
 }			
 
 function closePlay1(){
