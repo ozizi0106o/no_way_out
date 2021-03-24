@@ -192,9 +192,9 @@ header{
 
 .menu_ham ul .block ol{
 	/* 想要做往下延伸的選單 */
-	position: absolute;
-	top: 0;
-	right: 110px;
+	/* position: absolute; */
+	/* top: 0; */
+	/* right: 110px; */
 	border: 2px solid fuchsia;
 }
 
@@ -210,6 +210,7 @@ header{
 }
 
 /* ===== player ===== */
+/* ===== desktop ===== */
 .player_desktop{
 	width: 180px;
 	position: fixed;
@@ -228,7 +229,6 @@ header{
 	bottom: 110px;
 	right: 5%;
 	z-index: 2;
-	/* display: none; */
 	/* 點播放 才跳出 */
 }
 
@@ -251,6 +251,50 @@ header{
 	left: 18px;
 	z-index: 4;
 }
+
+/* 時間線整體區塊 */
+input[type="range"].timeline{ 
+	-webkit-appearance: none;
+	overflow: hidden;    
+	width: 145px;
+	height: 15px;
+	outline : none;      
+	background: none;
+	cursor: pointer;
+	z-index: 5;
+	margin-left: 18px;
+	margin-bottom: 95px;
+}
+
+/* 時間線 */
+/* 筆記：-webkit字樣還在測試階段! 再看還有什麼修改方式 */
+input[type="range"].timeline::-webkit-slider-runnable-track{
+	background-color: #C7B8DB;
+	height: 3px;
+	border-radius: 10px;
+	z-index: 5;
+}
+
+/* 調整時間的圓點及時間軌 */
+input[type="range"].timeline::-webkit-slider-thumb{
+	-webkit-appearance: none;
+	position: relative;
+	width: 10px;
+	height: 10px;
+	background: #8E57B9;
+	border-radius: 50%;
+	/* box-shadow: -100vw 0 0 100vw #46299D; */
+	/* 拉過去變色改不了高度 一改就壓縮到圈圈 */
+	margin-top: -3px;
+}
+
+.player_desktop .timebox, .player_desktop .song1, .player_desktop .singer1, .player_desktop .timeline{
+	display: none;
+}
+
+.player_desktop .timebox.show, .player_desktop .song1.show, .player_desktop .singer1.show, .player_desktop .timeline.show{
+	display: block;
+  }
 
 .desktop .playbox{
 	max-width: 100%;
@@ -307,10 +351,6 @@ header{
 	cursor: pointer;
 }
 
-.desktop .play1.off1{
-	display: none;
-}
-
 .desktop .pause1{
 	max-width: 22px;
 	border: 0;
@@ -324,8 +364,14 @@ header{
 	display: none;	
 }
 
-.desktop .pause1.turn2{
-	display: inline-block;
+/* 筆記：點擊這兩個class 需要隱藏起來 */
+.desktop .play1,.desktop .pause1{
+	display: none;
+}
+
+/* 筆記：當show出現的時候 需要出現這個按鈕 */
+.desktop .play1.show,.desktop .pause1.show{
+  display: block;
 }
 
 .desktop .next{
@@ -404,6 +450,7 @@ input[type="range"].desktop_line::-webkit-slider-thumb{
 	margin-top: -3px;
 }
 
+/* ===== mobile ===== */
 .player_mobile{
 	background-color: rgba(179,105,216,.90);
 	width: 100%;	
@@ -445,6 +492,14 @@ input[type="range"].desktop_line::-webkit-slider-thumb{
 	bottom: 15px;
 	left: 160px;
 	z-index: 4;
+}
+
+.mobile .play2,.mobile .pause2{
+	display: none;
+}
+
+.mobile .play2.show,.mobile .pause2.show{
+  display: block;
 }
 
 /* ===== type =====*/

@@ -21,8 +21,9 @@
 			<ul>
 				<li class="combobox">
 					<a href="music.html">Music</a>
-					<div class="triangle"></div>
 					<ol>
+					<div class="triangle"></div>
+
 						<li><a href="#">華語</a></li>
 						<li><a href="#">台語</a></li>
 						<li><a href="#">韓語</a></li>
@@ -141,16 +142,20 @@
 		<!-- ===== player ===== -->
 		<div class="player_desktop">
 			<div class="desktop">
-				<img src="img/player_timebox.png" alt="" class="timebox">
-				<span class="song1">Fall in you</span>
-				<span class="singer1">Ha Sung Woon</span>
-				<!-- 還有歌曲長度跟時間的線跟圓形  -->
+				<!-- ===== 歌名面板 ===== -->
+				<img src="img/player_timebox.png" alt="" class="timebox" id="timebox_btn">
+				<span class="song1" id="desktop_song1">Fall in you</span>
+				<span class="singer1" id="desktop_singer1">Ha Sung Woon</span>
+				<input type="range" class="timeline" id="timeline_btn" min="0" max="1" step="0.05" value="1">
+				<!-- 歌曲長度 當拉動timeline 右邊跑出提醒時間框框 -->
+
+				<!-- ===== 播放面板 ===== -->
 				<img src="img/player_box.png" alt="" class="playbox">
 				<img src="img/player_cd.png" alt="" class="cd_rotate">
 				<audio src="fall_in_you.mp3" id="audio"></audio>
 				<button class="front"><img src="img/player_backward.png" alt=""></button>
-				<button class="play1" onclick="autoPlay1()"><img src="img/player_play.png" alt=""></button>
-				<button class="pause1" onclick="closePlay1()"><img src="img/player_pause.png" alt=""></button>
+				<button class="play1 show" onclick="autoPlay1()" id="playbtn1"><img src="img/player_play.png" alt=""></button>
+				<button class="pause1" onclick="closePlay1()"  id="pausebtn1"><img src="img/player_pause.png" alt=""></button>
 				<button class="next"><img src="img/player_forward.png" alt=""></button>
 				<button class="volume1"><img src="img/player_volume.png" alt=""></button>
 				<button class="mute1"><img src="img/player_mute.png" alt=""></button>
@@ -165,8 +170,8 @@
 				</div>
 				<span class="song2">Fall in you</span>
 				<span class="singer2">Ha Sung Woon</span>
-				<button class="play2" onclick="autoPlay2()"><img src="img/mobile_play.png" alt=""></button>
-				<button class="pause2" onclick="closePlay2()"><img src="img/mobile_pause.png" alt=""></button>
+				<button class="play2 show" onclick="autoPlay2()" id="playbtn2"><img src="img/mobile_play.png" alt=""></button>
+				<button class="pause2" onclick="closePlay2()" id="pausebtn2"><img src="img/mobile_pause.png" alt=""></button>
 				<button class="volume2"><img src="img/mobile_volume.png" alt=""></button>
 				<button class="mute2"><img src="img/mobile_mute.png" alt=""></button>
 			</div>
