@@ -88,25 +88,6 @@
 		display: none;
 	}
 
-	/* ===== type ===== */
-	.type li{
-		width: 45%;
-	}
-
-	/* ===== rank ===== */
-	.rank li h3{
-		font-size: 25px;
-	}
-
-	.rank li p{
-		font-size: 16px;
-		line-height: 25px;
-	}
-
-	.rank li button{
-		max-width: 35px;
-	}
-
 	/* ===== footer ===== */
 	footer .information li a{
 		font-size: 18px;
