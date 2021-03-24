@@ -4,77 +4,600 @@
 	box-sizing: border-box;
 }
 
-body{
-	background-image: url(../img/index_bg.png);
-	background-size: cover;
-	/*放很大會重複一個背景 韓文跟括號多一種字體?*/
-	font-family: Trebuchet MS, 'Noto Sans TC';
-	color: #ffffff;
-}
-
-.wrapper{
-	margin: 0 auto;
-	width: 1200px;
-}
-
-/* ===== menu bar ===== */
-
-header{
-	background-color: rgba(0,0,0,.85);
-	position: fixed;
-	top: 0;
-	left: 5px;
-	z-index: 3;
+html{
 	width: 100%;
 }
 
-header a img{
+body{
+	background-image: url(../img/index_bg.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-family: Trebuchet MS, 'Noto Sans TC';
+	color: #ffffff;
+	width: 100%;
+}
+
+img{
+	max-width: 100%;
+}
+
+/* ===== menu bar ===== */
+header{
+	background-color: rgba(0,0,0,.85);
+	width: 100%;
+	position: sticky;
+	top: 0;
+	z-index: 5;
+}
+
+.menu_bar{
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.menu_bar .logo{
 	width: 102px;
 	height: 100px;
 	margin-top: 10px;
-	margin-left: 5px;
+	margin-left: 10px;
 }
 
-header ul{
+.menu_bar ul{
 	float: right;
 	display: flex;
 	margin-top: 40px;
-	margin-right: 150px;
+	margin-right: 10px;
 }
 
-header li{
-	margin-left: 40px;
+.menu_bar .combobox{
+	text-align: center;
+	margin-left: 15px;
+	position: relative;
 }
 
-header li a{
+.menu_bar li a{
 	color: #ffffff;
 	font-size: 25px;
 	text-decoration-line: none;
+	transition: all .5s
+} 
+
+.menu_bar li a:hover{ 
+	color: #b369d8;
+	text-shadow: rgb(255, 255, 255) 0px 0px 15px;
+	transition: .2s ease-out;
 }
 
-header li a:hover{
-	color: #8E2FBE;
+.menu_bar li:hover > a{
+	color: #b369d8;
+	text-shadow: rgb(255, 255, 255) 0px 0px 15px;
+	transition: .2s ease-out;
 }
 
-header li a img{
-	width: 40px;
+.menu_bar ol{
+	background-color: #ffffff;
+	border-radius: 10px;
+	position: absolute;
+	top: 40px;
+	/* 無法對齊置中 */
+	display: none;
+}
+
+.menu_bar li:hover ol{
+	display: block;
+}
+
+.menu_bar ol .triangle{
+	width: 0;
+	height: 0;
+	border-width: 0 8px 10px;
+	border-style: solid;
+	border-color: transparent transparent #ffffff;
+	position: absolute;
+	bottom: 100%;
+	/* 筆記：從最下面開始算 扣除跑出來的東西 */
+	left: 50%;
+	transform: translateX(-50%);
+	display: none;
+}
+
+.menu_bar li:hover ol .triangle{
+	display: block;
+}
+
+.menu_bar ol li{
+	padding: 10px;
+}
+
+.menu_bar ol a{
+	color: #1C1C1C;
+	font-size: 18px;
+	white-space: nowrap;
+}
+
+.menu_bar li a img{
+	width: 43px;
 	height: 25px;
-	margin-top: 0;
+	object-fit: fill;
+}
+
+/* 手機版漢堡 */
+.menu_ham a img{
+	width: 43px;
+	height: 25px;
+	object-fit: fill;
+	display: none;
+	position: absolute;
+	top: 40px;
+	right: 55px;
+}
+
+.menu_ham label{
+	background-color: #b369d8;
+	color: #ffffff;
+	font-size: 25px;
+	border: 0;
+	outline: 0;
+	/* display: none; */
+	padding: 6px;
+	position: absolute;
+	top: 34px;
+	right: 10px;
+	cursor: pointer;
+}
+
+.menu_ham input{
+	position: absolute;
+	top: 0;
+	right: 0;
+	/* display: none; */
+}
+
+.menu_ham ul{
+	background-color: #ffffff;
+	display: inline-block;
+	position: absolute;
+	top: -6px;
+	/* 用到負值感覺怪怪的 */
+	right: 35px;
+	border: 1px dashed #2D184B;
+	box-shadow: 3px 3px 0px #b369d8;
+}
+
+.menu_ham ul .block{	
+	text-align: center;
+	border-bottom: 1px dashed #2D184B;
+	padding: 15px;	
+	/* RWD 寬度小於575不見 */
+}
+
+.menu_ham ul .block a{
+	color: #b369d8;
+	font-size: 20px;
+	text-decoration-line: none;
+}
+
+.menu_ham ul .block ol{
+	/* 想要做往下延伸的選單 */
+	/* position: absolute; */
+	/* top: 0; */
+	/* right: 110px; */
+	border: 2px solid fuchsia;
+}
+
+.menu_ham .block ol li a{
+	font-size: 16px;
+	display: block;
+}
+
+/* ===== main ===== */
+.wrapper{
+	margin: 0 auto;
+	max-width: 1200px;
 }
 
 /* ===== player ===== */
-
-.player{
-	position: fixed;
-	top: 475px;
-	right: 30px;
-    z-index: 3;
-    /*放很大就不見了*/
-}
-
-.player img{
+/* ===== desktop ===== */
+.player_desktop{
 	width: 180px;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+    z-index: 3;
 }
+
+.desktop{
+	position: relative;	
+}
+
+.player_desktop .timebox{
+	width: 90%;
+	position: absolute;
+	bottom: 110px;
+	right: 5%;
+	z-index: 2;
+	/* 點播放 才跳出 */
+}
+
+.player_desktop .song1{
+	color: #2D184B;
+	opacity: .69;
+	font-size: 16px;
+	font-weight: bold;
+	position: absolute;
+	bottom: 145px;
+	left: 18px;
+	z-index: 4;
+}
+
+.player_desktop .singer1{
+	color: #C4B4D9;
+	font-size: 12px;
+	position: absolute;
+	bottom: 130px;
+	left: 18px;
+	z-index: 4;
+}
+
+/* 時間線整體區塊 */
+input[type="range"].timeline{ 
+	-webkit-appearance: none;
+	overflow: hidden;    
+	width: 145px;
+	height: 15px;
+	outline : none;      
+	background: none;
+	cursor: pointer;
+	z-index: 5;
+	margin-left: 18px;
+	margin-bottom: 95px;
+}
+
+/* 時間線 */
+/* 筆記：-webkit字樣還在測試階段! 再看還有什麼修改方式 */
+input[type="range"].timeline::-webkit-slider-runnable-track{
+	background-color: #C7B8DB;
+	height: 3px;
+	border-radius: 10px;
+	z-index: 5;
+}
+
+/* 調整時間的圓點及時間軌 */
+input[type="range"].timeline::-webkit-slider-thumb{
+	-webkit-appearance: none;
+	position: relative;
+	width: 10px;
+	height: 10px;
+	background: #8E57B9;
+	border-radius: 50%;
+	/* box-shadow: -100vw 0 0 100vw #46299D; */
+	/* 拉過去變色改不了高度 一改就壓縮到圈圈 */
+	margin-top: -3px;
+}
+
+.player_desktop .timebox, .player_desktop .song1, .player_desktop .singer1, .player_desktop .timeline{
+	display: none;
+}
+
+.player_desktop .timebox.show, .player_desktop .song1.show, .player_desktop .singer1.show, .player_desktop .timeline.show{
+	display: block;
+  }
+
+.desktop .playbox{
+	max-width: 100%;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 2;
+}
+
+.desktop .cd_rotate{
+	max-width: 80px;
+	position: absolute;
+	bottom: 27px;
+	right: 10px;
+	z-index: 3;
+}
+
+.desktop .cd_rotate.show{
+	animation: cd 2.5s linear normal infinite;
+	/* 暫停動畫 重放會從起始點開始 不會從暫停的地方@@ */
+}
+
+@keyframes cd{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+.desktop .front{
+	max-width: 22px;
+	border: 0;
+	outline: 0;
+	background-color: transparent;
+	position: absolute;
+	bottom: 1px;
+	left: 35px;
+	z-index: 4;
+	cursor: pointer;
+}
+/* 欠換歌 */
+
+.desktop .play1{
+	max-width: 22px;
+	border: 0;
+	outline: 0;
+	background-color: transparent;
+	position: absolute;
+	bottom: 1px;
+	left: 50px;
+	z-index: 4;
+	cursor: pointer;
+}
+
+.desktop .pause1{
+	max-width: 22px;
+	border: 0;
+	outline: 0;
+	background-color: transparent;
+	position: absolute;
+	bottom: 1px;
+	left: 50px;
+	z-index: 4;
+	cursor: pointer;
+	display: none;	
+}
+
+/* 筆記：點擊這兩個class 需要隱藏起來 */
+.desktop .play1,.desktop .pause1{
+	display: none;
+}
+
+/* 筆記：當show出現的時候 需要出現這個按鈕 */
+.desktop .play1.show,.desktop .pause1.show{
+  display: block;
+}
+
+.desktop .next{
+	max-width: 22px;
+	border: 0;
+	outline: 0;
+	background-color: transparent;
+	position: absolute;
+	bottom: 1px;
+	left: 65px;
+	z-index: 4;
+	cursor: pointer;
+}
+/* 欠換歌 */
+
+.desktop .volume1{
+	max-width: 22px;
+	border: 0;
+	outline: 0;
+	background-color: transparent;
+	position: absolute;
+	bottom: 1px;
+	left: 80px;
+	z-index: 4;
+	cursor: pointer;
+	/* display: none; */
+}
+/* 欠音量調整 */
+
+.desktop .mute1{
+	max-width: 22px;
+	border: 0;
+	outline: 0;
+	background-color: transparent;
+	position: absolute;
+	bottom: 1px;
+	left: 80px;
+	z-index: 4;
+	cursor: pointer;
+	display: none;
+}
+/* 欠靜音 */
+
+/* .desktop .volume1,.desktop .mute1{
+	display: none;
+}
+
+.desktop .volume1.show,.desktop .mute1.show{
+  display: block;
+} */
+
+/* 音量線整體區塊 */
+input[type="range"].desktop_line{ 
+	-webkit-appearance: none;
+	overflow: hidden;    
+	width: 35px;
+	height: 15px;
+	outline : none;      
+	background: none;
+	cursor: pointer;
+	z-index: 5;
+	margin-left: 100px ;
+	margin-bottom: 4px;
+}
+
+/* 音量線 */
+input[type="range"].desktop_line::-webkit-slider-runnable-track{
+	background-color: #C7B8DB;
+	height: 3px;
+	border-radius: 10px;
+	z-index: 5;
+}
+
+/* 調整音量的圓點及音軌 */
+input[type="range"].desktop_line::-webkit-slider-thumb{
+	-webkit-appearance: none;
+	position: relative;
+	width: 10px;
+	height: 10px;
+	background: #8E57B9;
+	border-radius: 50%;
+	/* box-shadow: -100vw 0 0 100vw #46299D; */
+	/* 拉過去變色改不了高度 一改就壓縮到圈圈 */
+	margin-top: -3px;
+}
+
+/* ===== mobile ===== */
+.player_mobile{
+	background-color: rgba(179,105,216,.90);
+	/* 背景跑掉了 沒有整個包住 */
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+    z-index: 3;
+}
+
+.mobile{
+	position: relative;
+}
+
+.mobile .album{
+	max-width: 120px;
+	box-shadow: 0px 0px 5px #000000;
+	position: absolute;
+	bottom: 15px;
+	left: 15px;
+}
+
+.mobile .album img{
+	display: block;
+}
+
+.player_mobile .song2{
+	color: #FFFFFF;
+	text-shadow: 3px 3px 3px #000000;
+	font-size: 20px;
+	font-weight: bold;
+	position: absolute;
+	bottom: 35px;
+	left: 160px;
+	z-index: 4;
+}
+
+.player_mobile .singer2{
+	color: rgba(255,255,255,.80);
+	font-size: 14px;
+	position: absolute;
+	bottom: 15px;
+	left: 160px;
+	z-index: 4;
+}
+
+.mobile .play2{
+	max-width: 30px;
+	border: 0;
+	outline: 0;
+	background-color: transparent;
+	position: absolute;
+	bottom: 20px;
+	left: 300px;
+	z-index: 4;
+	cursor: pointer;
+}
+
+.mobile .pause2{
+	max-width: 30px;
+	border: 0;
+	outline: 0;
+	background-color: transparent;
+	position: absolute;
+	bottom:20px;
+	left: 300px;
+	z-index: 4;
+	cursor: pointer;
+}
+
+.mobile .play2,.mobile .pause2{
+	display: none;
+}
+
+.mobile .play2.show,.mobile .pause2.show{
+  display: block;
+}
+/* 從大螢幕 拉到小螢幕的RWD 按鈕不會跟著變換 */
+
+.mobile .volume2{
+	max-width: 30px;
+	border: 0;
+	outline: 0;
+	background-color: transparent;
+	position: absolute;
+	bottom: 20px;
+	left: 330px;
+	z-index: 4;
+	cursor: pointer;
+	/* display: none; */
+}
+
+.mobile .mute2{
+	max-width: 30px;
+	border: 0;
+	outline: 0;
+	background-color: transparent;
+	position: absolute;
+	bottom: 20px;
+	left: 330px;
+	z-index: 4;
+	cursor: pointer;
+	display: none;
+}	
+
+/* 音量線整體區塊 */
+input[type="range"].mobile_line{ 
+	-webkit-appearance: none;
+	overflow: hidden;    
+	width: 110px;
+	/* 螢幕更小 線可能跑出去 */
+	height: 15px;
+	outline : none;      
+	background: none;
+	cursor: pointer;
+	z-index: 5;
+	margin-left: 360px ;
+	margin-bottom: 25px;
+}
+
+/* 音量線 */
+input[type="range"].mobile_line::-webkit-slider-runnable-track{
+	background-color: #C7B8DB;
+	height: 3px;
+	border-radius: 10px;
+	z-index: 5;
+}
+
+/* 調整音量的圓點及音軌 */
+input[type="range"].mobile_line::-webkit-slider-thumb{
+	-webkit-appearance: none;
+	position: relative;
+	width: 10px;
+	height: 10px;
+	background: #8E57B9;
+	border-radius: 50%;
+	/* box-shadow: -100vw 0 0 100vw #46299D; */
+	/* 拉過去變色改不了高度 一改就壓縮到圈圈 */
+	margin-top: -3px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* ===== news ===== */
 
@@ -176,44 +699,64 @@ aside li a{
 	/*數字凸排*/
 }
 
-/* ===== footer ===== */
+
+
+
+
+
+
+
+
+
+
+/* ===== footer =====*/
 
 footer{
+	width: 300px;
 	margin: 0 auto;
-	margin-top: 20px;	
+	margin-top: 20px;
 }
 
-.information{	
+footer .information{	
 	display: flex;
 	justify-content: center;
 	margin-bottom: 20px;
 }
 
-.information li{
+footer .information li{
 	padding-left: 10px;
 	padding-right: 10px;
-
 }
 
-footer a{
+footer .information li a{
 	color: #ffffff;
 	font-size: 20px;
 	text-decoration-line: none;
+	transition: all .3s;
 }
 
-.contact{
+footer .information li a:hover{
+	text-shadow: 0px 5px 3px #b369d8;
+}
+
+footer .contact{
 	display: flex;
 	justify-content: center;
 	margin-bottom: 20px;
 }
 
-.contact li{
+footer .contact li{
 	padding-left: 10px;
 	padding-right: 10px;
 }
 
-.contact li a img{
-	width: 40px;
+footer .contact li a img{
+	width: 35px;
+	transition: all .3s;
+}
+
+footer .contact li a img:hover{
+	transform: rotate3d(0, 0, -1, 25deg);
 }
 
 footer h5{
@@ -222,3 +765,4 @@ footer h5{
 	text-align: center;
 	margin-bottom: 20px;
 }
+
