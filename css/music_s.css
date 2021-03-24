@@ -40,8 +40,7 @@
 
 	input[type="range"].timeline{ 
 		width: 125px;
-		height: 15px;
-		margin-bottom: 81px;
+		bottom: 98px;
 	}
 
 	.desktop .cd_rotate{
@@ -80,8 +79,8 @@
 	}
 
 	input[type="range"].desktop_line{
-		margin-left: 93px;
-		margin-bottom: 2px;
+		width: 30px;
+		left: 92px;
 	}
 
 	.player_mobile{

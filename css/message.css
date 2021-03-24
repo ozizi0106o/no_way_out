@@ -251,9 +251,10 @@ input[type="range"].timeline{
 	outline : none;      
 	background: none;
 	cursor: pointer;
+	position: absolute;
+	left: 16px;
+	bottom: 113px;
 	z-index: 5;
-	margin-left: 18px;
-	margin-bottom: 95px;
 }
 
 /* 時間線 */
@@ -417,14 +418,15 @@ input[type="range"].timeline::-webkit-slider-thumb{
 input[type="range"].desktop_line{ 
 	-webkit-appearance: none;
 	overflow: hidden;    
-	width: 35px;
+	width: 40px;
 	height: 15px;
 	outline : none;      
 	background: none;
 	cursor: pointer;
+	position: absolute;
+	bottom: 1px;
+	left: 98px;
 	z-index: 5;
-	margin-left: 100px ;
-	margin-bottom: 4px;
 }
 
 /* 音量線 */
@@ -464,11 +466,11 @@ input[type="range"].desktop_line::-webkit-slider-thumb{
 }
 
 .mobile .album{
-	max-width: 120px;
+	max-width: 100px;
 	box-shadow: 0px 0px 5px #000000;
 	position: absolute;
-	bottom: 15px;
-	left: 15px;
+	bottom: 10px;
+	left: 10px;
 }
 
 .mobile .album img{
@@ -481,8 +483,8 @@ input[type="range"].desktop_line::-webkit-slider-thumb{
 	font-size: 20px;
 	font-weight: bold;
 	position: absolute;
-	bottom: 35px;
-	left: 160px;
+	bottom: 40px;
+	left: 120px;
 	z-index: 4;
 }
 
@@ -490,31 +492,31 @@ input[type="range"].desktop_line::-webkit-slider-thumb{
 	color: rgba(255,255,255,.80);
 	font-size: 14px;
 	position: absolute;
-	bottom: 15px;
-	left: 160px;
+	bottom: 20px;
+	left: 120px;
 	z-index: 4;
 }
 
 .mobile .play2{
-	max-width: 30px;
+	max-width: 25px;
 	border: 0;
 	outline: 0;
 	background-color: transparent;
 	position: absolute;
-	bottom: 20px;
-	left: 300px;
+	bottom: 25px;
+	left: 220px;
 	z-index: 4;
 	cursor: pointer;
 }
 
 .mobile .pause2{
-	max-width: 30px;
+	max-width: 25px;
 	border: 0;
 	outline: 0;
 	background-color: transparent;
 	position: absolute;
-	bottom:20px;
-	left: 300px;
+	bottom:25px;
+	left: 220px;
 	z-index: 4;
 	cursor: pointer;
 }
@@ -529,26 +531,25 @@ input[type="range"].desktop_line::-webkit-slider-thumb{
 /* 從大螢幕 拉到小螢幕的RWD 按鈕不會跟著變換 */
 
 .mobile .volume2{
-	max-width: 30px;
+	max-width: 25px;
 	border: 0;
 	outline: 0;
 	background-color: transparent;
 	position: absolute;
-	bottom: 20px;
-	left: 330px;
+	bottom: 25px;
+	left: 240px;
 	z-index: 4;
 	cursor: pointer;
-	/* display: none; */
 }
 
 .mobile .mute2{
-	max-width: 30px;
+	max-width: 25px;
 	border: 0;
 	outline: 0;
 	background-color: transparent;
 	position: absolute;
-	bottom: 20px;
-	left: 330px;
+	bottom: 25px;
+	left: 240px;
 	z-index: 4;
 	cursor: pointer;
 	display: none;
@@ -558,15 +559,15 @@ input[type="range"].desktop_line::-webkit-slider-thumb{
 input[type="range"].mobile_line{ 
 	-webkit-appearance: none;
 	overflow: hidden;    
-	width: 110px;
-	/* 螢幕更小 線可能跑出去 */
+	width: 42px;
 	height: 15px;
 	outline : none;      
 	background: none;
 	cursor: pointer;
+	position: absolute;
+	bottom: 27px;
+	left: 265px;
 	z-index: 5;
-	margin-left: 360px ;
-	margin-bottom: 25px;
 }
 
 /* 音量線 */

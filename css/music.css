@@ -252,9 +252,10 @@ input[type="range"].timeline{
 	outline : none;      
 	background: none;
 	cursor: pointer;
+	position: absolute;
+	left: 16px;
+	bottom: 113px;
 	z-index: 5;
-	margin-left: 18px;
-	margin-bottom: 95px;
 }
 
 /* 時間線 */
@@ -418,14 +419,15 @@ input[type="range"].timeline::-webkit-slider-thumb{
 input[type="range"].desktop_line{ 
 	-webkit-appearance: none;
 	overflow: hidden;    
-	width: 35px;
+	width: 40px;
 	height: 15px;
 	outline : none;      
 	background: none;
 	cursor: pointer;
+	position: absolute;
+	bottom: 1px;
+	left: 98px;
 	z-index: 5;
-	margin-left: 100px ;
-	margin-bottom: 4px;
 }
 
 /* 音量線 */
@@ -560,7 +562,6 @@ input[type="range"].mobile_line{
 	-webkit-appearance: none;
 	overflow: hidden;    
 	width: 42px;
-	/* 螢幕更小 線可能跑出去 */
 	height: 15px;
 	outline : none;      
 	background: none;
