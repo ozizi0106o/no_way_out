@@ -91,6 +91,67 @@
 		display: none;
 	}
 
+	/* ===== new song ===== */
+	.new_song{
+		max-width: 70%;
+
+	}
+
+	/* ===== news ===== */
+	.news{
+		max-width: 100%;
+		min-width: 320px;
+		/* 裡面東西歪一邊 沒有置中 */
+	}
+
+	.news_block{
+		display: block;
+	}
+
+	.news_block .new1, .new2, .new3, .new4, .new5, .new6{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.news_block .photo1, .photo2, .photo3, .photo4, .photo5, .photo6{
+		margin-bottom: 10px;		
+	}
+
+	.news_block h3{
+		font-size: 18px;
+		margin-left: 5px;
+	}
+	
+	.news_block h4{
+		font-size: 16px;
+		margin-left: 5px;
+	}
+	
+	.news_block p{
+		font-size: 12px;
+		margin-left: 5px;
+	}
+	
+	/* ===== main star ===== */
+	.main_star{
+		max-width: 100%;
+	}
+
+	.main_star li{
+		display: block;
+	}
+
+	.main_star li img{
+		max-width: 100%;
+	}
+	
+	/* ===== hot mv ===== */
+	.hot_mv li{
+	width: calc((100% - 60px) / 2);
+	min-width: 170px;
+	}
+	/* singer條太大 會遮到臉 */
+
 	/* ===== footer ===== */
 	footer .information li a{
 		font-size: 18px;

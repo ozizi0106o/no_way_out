@@ -9,5 +9,39 @@
     .player_mobile{
         display: none;
     }
+
+    /* ===== news ===== */
+
+    .news_block h3{
+        font-size: 14px;
+        padding: 5px;
+    }
+    
+    .news_block h4{
+        max-width: 250px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    
+    .news_block p{
+        font-size: 14px;
+    }
+
+    /* ===== main star ===== */
+    .main_star{
+        max-width: 100%;
+    }
+
+    .main_star li{
+        padding: 0 10px;
+    }
+
+    /* ===== hot mv ===== */
+    .hot_mv li{
+    width: calc((100% - 100px) / 3);
+    min-width: 170px;
+    }
+
+    /* singer條太大 會遮到臉 */
 }
 

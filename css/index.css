@@ -596,6 +596,7 @@ input[type="range"].mobile_line::-webkit-slider-thumb{
 .swiper-container{
 	width: 100%;
 	height: 100%;
+	margin-top: 20px;
 }
 
 .swiper-wrapper{
@@ -831,8 +832,7 @@ input[type="range"].mobile_line::-webkit-slider-thumb{
 .main_star{
 	max-width: 80%;
 	margin: 0 auto;
-	/* margin-top: 20px; */
-	/* 看一下上下差距 */
+	margin-top: 20px;
 }
 
 .main_star h2{
@@ -869,7 +869,6 @@ input[type="range"].mobile_line::-webkit-slider-thumb{
 }
 
 /* ===== hot mv ===== */
-
 .hot_mv{
 	margin: 0 auto;
 }
@@ -885,16 +884,9 @@ input[type="range"].mobile_line::-webkit-slider-thumb{
 	margin: 0 auto;
 	display: flex;
 	flex-wrap: wrap;
-
-	border: 2px solid forestgreen;
 }
 
 .hot_mv li{
-	margin: 0 auto;
-	/* max-width: 100%; */
-	border: 2px solid fuchsia;
-
-
 	background-color: #ffffff;
 	padding: 15px;
 	position: relative;
@@ -978,7 +970,6 @@ input[type="range"].mobile_line::-webkit-slider-thumb{
 }
 
 /* ===== footer =====*/
-
 footer{
 	width: 300px;
 	margin: 0 auto;

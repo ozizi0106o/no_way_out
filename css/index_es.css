@@ -24,7 +24,85 @@
 	/* ===== player ===== */
 	.player_desktop{
 		display: none;
-	}	
+	}
+
+	/* ===== new song ===== */
+	.new_song{
+		max-width: 100%;
+	}
+	/* 調整照片變小一點 */
+
+	.new_song li a h3{
+		font-size: 16px;
+	}
+
+	.new_song li a h4{
+		font-size: 12px;
+	}
+
+	/* ===== news ===== */
+	.news{
+		max-width: 100%;
+		min-width: 300px;
+		/* 裡面東西歪一邊 沒有置中 */
+	}
+
+	.news_block{
+		display: block;
+	}
+
+	.news_block .new1, .new2, .new3, .new4, .new5, .new6{
+		flex-direction: column;
+		align-items: center;
+		margin: 0 auto;
+	}
+
+	.news_block .photo1, .photo2, .photo3, .photo4, .photo5, .photo6{
+		max-width: 100%;
+		min-width: 250px;
+		margin-bottom: 10px;
+	}
+
+	.article1, .article2, .article3, .article4, .article5, .article6{
+		max-width: 100%;
+		min-width: 250px;
+	}
+
+	.news_block h3{
+		font-size: 18px;
+		margin-left: 5px;
+		/* 灰色區塊會亂跑 */
+	}
+	
+	.news_block h4{
+		font-size: 16px;
+		margin-left: 5px;
+	}
+	
+	.news_block p{
+		font-size: 12px;
+		margin-left: 5px;
+	}
+	
+	/* ===== main star ===== */
+	.main_star{
+		max-width: 100%;
+		margin-top: 0;
+	}
+
+	.main_star li{
+		display: block;
+	}
+
+	.main_star li img{
+		max-width: 100%;
+	}
+	
+	/* ===== hot mv ===== */
+	.hot_mv li{
+		width: 100%;
+	}
+	/* singer條太大 會遮到臉 */
 
 	/* ===== footer ===== */
 	footer .information li a{
