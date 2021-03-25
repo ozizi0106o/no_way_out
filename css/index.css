@@ -730,7 +730,7 @@ input[type="range"].mobile_line::-webkit-slider-thumb{
 	display: block;
 }
 
-.new_song .rank1{
+.new_song .rank1, .rank2, .rank3, .rank4, .rank5{
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
@@ -773,32 +773,36 @@ input[type="range"].mobile_line::-webkit-slider-thumb{
 	margin-right: 10px;
 }
 
+
+
+
+
 /* ===== news ===== */
 
 .news{
-	margin: 0 auto;
+	/* margin: 0 auto;
 	width: 600px;
-	margin-top: 20px;
+	margin-top: 20px; */
 }
 
 .news h2{
-	font-size: 30px;
+	/* font-size: 30px;
 	text-align: center;
-	margin-bottom: 50px;
+	margin-bottom: 50px; */
 }
 
 .news_block li{
-	display: inline-block;
+	/* display: inline-block;
 	align-items: center;
-	vertical-align: top;
+	vertical-align: top; */
 }
 
 .news_block li img{
-	width: 300px;
+	/* width: 300px; */
 }
 
 .news_block li h3{
-	background-color: #A7A7A7;
+	/* background-color: #A7A7A7;
 	width: 90px;
 	color: #000000;
 	font-size: 22px;
@@ -806,29 +810,30 @@ input[type="range"].mobile_line::-webkit-slider-thumb{
 	text-align: center;
 	margin-left: 10px;
 	margin-bottom: 16px;
-	display: inline-block;
+	display: inline-block; */
 }
 
 .news_block li h4{
-	color: #ffffff;
+	/* color: #ffffff;
 	font-size: 18px;
 	line-height: 30px;
 	margin-left: 10px;
-	margin-bottom: 16px;
+	margin-bottom: 16px; */
 }
 
 .news_block li p{
-	color: #ffffff;
+	/* color: #ffffff;
 	font-size: 16px;
 	margin-left: 10px;
-	margin-bottom: 30px;
+	margin-bottom: 30px; */
 }
 
 /* ===== main star ===== */
 
 .main_star{
+	max-width: 60%;
 	margin: 0 auto;
-	margin-top: 20px;
+	/* margin-top: 20px; */
 }
 
 .main_star h2{
@@ -838,25 +843,29 @@ input[type="range"].mobile_line::-webkit-slider-thumb{
 }
 
 .main_star ul{
-	width: 800px;
-	margin: 0 auto;
-	display: table;
+	/* width: 800px; */
+	border: 2px solid fuchsia;
+	/* margin: 0 auto; */
+	/* display: table; */
+	/* display: flex; */
 }
 
 .main_star li{
-	display: table-cell;
-	text-align: center;
+	/* display: table-cell; */
+	/* text-align: center; */
+	/* display: inline-block; */
+	/* flex-wrap: 90%; */
+	border: 2px solid seagreen;
 }
 
 .main_star li img{
-	width: 150px;
-	height: 150px;
 	border-radius: 50%;
 }
 
 .main_star li h3{
 	color: #A7A7A7;
-	font-size: 28px;
+	font-size: 22px;
+	text-align: center;
 	padding-top: 10px;
 }
 
