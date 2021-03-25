@@ -171,7 +171,6 @@ header{
 	text-align: center;
 	border-bottom: 1px dashed #2D184B;
 	padding: 15px;
-	border: 2px solid red;
 	/* RWD 寬度小於575不見 */
 }
 

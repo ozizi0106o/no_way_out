@@ -3,6 +3,10 @@
 	/* ===== menu bar ===== */
 	.menu_bar ul{
 		display: none;
+		}
+	
+	#burger:checked + .ham{
+		display: block;
 	}
 
 	.menu_ham a img{
@@ -16,7 +20,6 @@
 	.menu_ham input{
 		display: none;
 	}
-	/* 選單變很小 跑不出來 */
 
 	/* ===== player ===== */
 	.player_desktop{

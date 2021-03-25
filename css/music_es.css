@@ -1,27 +1,13 @@
 @media(max-width: 575px){
 
 	/* ===== menu bar ===== */
-
 	.menu_bar ul{
 	display: none;
-	} 
+	}
 
-	/* .checkbox-trigger:checked + .menu_ham .block{
-		display:block;
-	} */
-
-	/* .menu_ham:before,.menu_ham:after {
-  	content: "";
-  	display: table;
-} */
-
-
-
-
-
-
-
-
+	#burger:checked + .ham{
+		display: block;
+	}
 
 	.menu_ham a img{
 		display: block;
@@ -34,7 +20,6 @@
 	.menu_ham input{
 		display: none;
 	}
-	/* 選單變很小 跑不出來 */
 
 	/* ===== player ===== */
 	.player_desktop{
