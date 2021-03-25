@@ -592,18 +592,86 @@ input[type="range"].mobile_line::-webkit-slider-thumb{
 	margin-top: -3px;
 }
 
-
-
-
-
-
-
-
-
-
 /* ===== ad ===== */
+.swiper-container{
+	width: 100%;
+	height: 100%;
+}
 
-.ad_block{
+.swiper-wrapper{
+	margin: 0 auto;
+}
+
+.swiper-slide{
+	text-align: center;
+	font-size: 18px;
+
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	/* 研究這段css!!!!!!! */
+
+	position: relative;
+}
+
+.swiper-slide a img{
+	/* max-width: 100%; */
+	display: block;
+}
+
+.swiper-slide:nth-child(1) h1{
+	color: #ffffff;
+	font-size: 40px;
+	line-height: 50px;
+	text-align: left;
+	text-shadow: 2px 2px 5px #8E57B9;
+	position: absolute;
+	top: 320px;
+	left: 590px;
+	/* 如何讓字跟著圖片跑 */
+}
+
+.swiper-slide:nth-child(2) h1{
+	color: #ffffff;
+	font-size: 40px;
+	line-height: 50px;
+	text-align: left;
+	text-shadow: 2px 2px 5px #8E57B9;
+	position: absolute;
+	top: 20px;
+	left: 250px;
+	/* 如何讓字跟著圖片跑 */
+}
+
+.swiper-slide:nth-child(3) h1{
+	color: #ffffff;
+	font-size: 40px;
+	line-height: 50px;
+	text-align: left;
+	text-shadow: 2px 2px 5px #8E57B9;
+	position: absolute;
+	top: 380px;
+	left: 250px;
+	/* 如何讓字跟著圖片跑 */
+}
+
+/* .ad_block{
+	max-width: 736px;
+	margin: 0 auto;
+	position: relative;
+} */
+
+/* .ad_block{
 	background-image: 
 		url(../img/ad1.png),
 		url(../img/ad_banner.png),
@@ -613,19 +681,24 @@ input[type="range"].mobile_line::-webkit-slider-thumb{
 	background-size: auto, 180px 450px, 450px 300px;
 	background-color: rgba(25,25,112,1);
 	margin: 0 auto;
-	margin-top: 110px;
-	width: 736px;
-	height: 450px;
-}
+	max-width: 736px;
+} */
 
-.ad_block h1{
+/* .ad_block h1{
 	color: #ffffff;
 	font-size: 40px;
 	text-align: left;
 	line-height: 50px;
 	padding-top: 340px;
 	padding-left: 185px;
-}
+} */
+
+
+
+
+
+
+
 
 /* ===== new song ===== */
 

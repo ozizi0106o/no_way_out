@@ -9,6 +9,11 @@
 	<link rel="stylesheet" href="css/index_s.css">
 	<link rel="stylesheet" href="css/index_es.css">
 	<link rel="shortcut icon" href="img/favicon.ico">
+
+	<!-- Link Swiper's CSS -->
+	<link rel="stylesheet" href="../package/swiper-bundle.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
 	<title>No Way Out</title>	
 </head>
@@ -180,19 +185,46 @@
 				<button class="mute2"><img src="img/mobile_mute.png" alt=""></button>
 				<input type="range" class="mobile_line" min="0" max="1" step="0.05" value="1">	
 			</div>
-		</div>
-
-		
-		
-		
-		
+		</div>		
 		
 		<!-- ===== ad ===== -->
 
-		<!-- <div class="ad_block">
-			<h1>AB6IX SALUTE 改版強勢回歸!<br>
-                朴佑鎭帶來新冬日主打❤</h1>
-		</div> -->
+		<!-- Swiper -->
+		<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<a href="#">
+					<h1>朴佑鎭帶來冬日主打<br>AB6IX強勢回歸</h1>
+					<img src="img/index_3.png" alt="">
+				</a>
+			</div>
+
+			<div class="swiper-slide">
+				<a href="#">
+					<h1>呂思緯為五月天<br>演唱會暖場</h1>
+					<img src="img/index_1.jpg" alt="">
+				</a>
+			</div>
+
+			<div class="swiper-slide">
+				<a href="#">
+					<h1>林俊傑登TMEA娛樂音樂盛典<br>帶來新單曲首唱</h1>
+					<img src="img/index_2.jpg" alt="">
+				</a>
+			</div>
+		</div>
+	  
+
+
+
+
+		<!-- <div class="ad_block"> -->
+			
+
+			<!-- <h1>AB6IX SALUTE 改版強勢回歸!<br>
+                朴佑鎭帶來新冬日主打❤</h1> -->
+			<!-- 想做修過圖的輪播 -->
+		</div>
 
 		<!-- ===== new song ===== -->
 
@@ -376,6 +408,20 @@
 	</div>
 
 	<script src="js/index.js"></script>
+
+	<!-- Swiper JS -->
+	<script src="../package/swiper-bundle.min.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+
+	<!-- Initialize Swiper -->
+	<script>
+		var swiper = new Swiper('.swiper-container', {
+			pagination: {
+			el: '.swiper-pagination',
+			dynamicBullets: true,
+			},
+		});
+	</script>
 
 </body>
 </html>
