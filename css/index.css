@@ -696,7 +696,6 @@ input[type="range"].mobile_line::-webkit-slider-thumb{
 } */
 
 /* ===== new song ===== */
-
 .new_song{
 	max-width: 50%;
 	margin: 0 auto;
@@ -773,92 +772,88 @@ input[type="range"].mobile_line::-webkit-slider-thumb{
 	margin-right: 10px;
 }
 
-
-
-
-
 /* ===== news ===== */
-
 .news{
-	/* margin: 0 auto;
-	width: 600px;
-	margin-top: 20px; */
+	max-width: 50%;
+	min-width: 500px;
+	margin: 0 auto;
 }
 
 .news h2{
-	/* font-size: 30px;
+	font-size: 30px;
 	text-align: center;
-	margin-bottom: 50px; */
+	margin-bottom: 30px;
 }
 
-.news_block li{
-	/* display: inline-block;
-	align-items: center;
-	vertical-align: top; */
+/* ===== 最新消息 ===== */
+.news_block{
+	display: inline-block;
 }
 
-.news_block li img{
-	/* width: 300px; */
+.news_block .new1, .new2, .new3, .new4, .new5, .new6{
+	display: flex;
 }
 
-.news_block li h3{
-	/* background-color: #A7A7A7;
-	width: 90px;
+.news_block .photo1, .photo2, .photo3, .photo4, .photo5, .photo6{
+	width: 50%;
+}
+
+.news_block .article1, .article2, .article3, .article4, .article5, .article6{
+	width: 50%;
+}
+
+.news_block h3{
+	background-color: #A7A7A7;
 	color: #000000;
 	font-size: 22px;
-	line-height: 32px;
 	text-align: center;
 	margin-left: 10px;
-	margin-bottom: 16px;
-	display: inline-block; */
+	padding: 8px;
+	display: inline-block;
 }
 
-.news_block li h4{
-	/* color: #ffffff;
+.news_block h4{
+	max-width: 300px;
+	color: #ffffff;
 	font-size: 18px;
 	line-height: 30px;
-	margin-left: 10px;
-	margin-bottom: 16px; */
+	margin: 10px 10px 10px 10px;
 }
 
-.news_block li p{
-	/* color: #ffffff;
-	font-size: 16px;
+.news_block p{
+	color: #ffffff;
+	font-size: 14px;
 	margin-left: 10px;
-	margin-bottom: 30px; */
+	margin-bottom: 40px;
 }
 
 /* ===== main star ===== */
-
 .main_star{
 	max-width: 80%;
 	margin: 0 auto;
 	/* margin-top: 20px; */
+	/* 看一下上下差距 */
 }
 
 .main_star h2{
 	font-size: 30px;
 	text-align: center;
-	margin-bottom: 50px;
+	margin-bottom: 30px;
 }
 
 .main_star ul{
-	/* width: 800px; */
-	border: 2px solid fuchsia;
 	margin: 0 auto;
-	/* margin-left: 20px; */
 	display: table;
-	/* display: flex; */
 }
 
 .main_star li{
-	/* display: table-cell; */
-	/* text-align: center; */
 	display: inline-block;
-	/* margin: 0 auto; */
-	/* padding: 20px; */
-	/* flex-wrap: 90%; */
-	border: 2px solid seagreen;
+	padding: 0 20px;
+}
+
+.main_star li a{
+	text-decoration: none;
+	display: block;
 }
 
 .main_star li img{
@@ -871,6 +866,10 @@ input[type="range"].mobile_line::-webkit-slider-thumb{
 	text-align: center;
 	padding-top: 10px;
 }
+
+
+
+
 
 /* ===== hot mv ===== */
 

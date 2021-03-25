@@ -79,3 +79,85 @@ function closePlay2(){
     pausebtn2.classList.remove("show");
     playbtn2.classList.add("show");
 }
+
+
+// ===== main ster ===== //
+// 俊傑 //
+var shoot1 = new TimelineMax();
+shoot1.to(".turn1", .7,
+{                     
+rotationX: 90, //旋轉
+transformOrigin: 'bottom center 0', //旋轉的定位點 x軸 y軸 z軸
+transformPerspective:  50000, //攝影機鏡頭
+});
+shoot1.stop();
+
+// 滑鼠移入
+document.getElementById("jj").onmouseover = function(){
+    shoot1.play();
+}
+
+//  滑鼠移開，動畫還原
+document.getElementById("jj").onmouseleave = function(){
+shoot1.reverse();
+}  
+
+// 安安 //
+var shoot2 = new TimelineMax();
+shoot2.to(".turn2", .7,
+{                     
+rotationX: 90, //旋轉
+transformOrigin: 'bottom center 0', //旋轉的定位點 x軸 y軸 z軸
+transformPerspective:  50000, //攝影機鏡頭
+});
+shoot2.stop();
+
+// 滑鼠移入
+document.getElementById("an").onmouseover = function(){
+    shoot2.play();
+}
+
+//  滑鼠移開，動畫還原
+document.getElementById("an").onmouseleave = function(){
+shoot2.reverse();
+} 
+
+// 鼓鼓 //
+var shoot3 = new TimelineMax();
+shoot3.to(".turn3", .7,
+{                     
+rotationX: 90, //旋轉
+transformOrigin: 'bottom center 0', //旋轉的定位點 x軸 y軸 z軸
+transformPerspective:  50000, //攝影機鏡頭
+});
+shoot3.stop();
+
+// 滑鼠移入
+document.getElementById("goo").onmouseover = function(){
+    shoot3.play();
+}
+
+//  滑鼠移開，動畫還原
+document.getElementById("goo").onmouseleave = function(){
+shoot3.reverse();
+} 
+
+// 青峰 //
+var shoot4 = new TimelineMax();
+shoot4.to(".turn4", .7,
+{                     
+rotationX: 90, //旋轉
+transformOrigin: 'bottom center 0', //旋轉的定位點 x軸 y軸 z軸
+transformPerspective:  50000, //攝影機鏡頭
+});
+shoot4.stop();
+
+// 滑鼠移入
+document.getElementById("feng").onmouseover = function(){
+    shoot4.play();
+}
+
+//  滑鼠移開，動畫還原
+document.getElementById("feng").onmouseleave = function(){
+shoot4.reverse();
+} 
