@@ -9,5 +9,20 @@
     .player_mobile{
         display: none;
     }
+
+    /* ===== news ===== */
+    .news{
+        max-width: 40%;
+        min-width: 630px;
+    }
+
+    .news_block{
+        /* max-width: 90%; */
+        margin: 0 auto;
+    }
+
+    aside{
+        display: none;
+    }
 }
 

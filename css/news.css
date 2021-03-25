@@ -597,7 +597,6 @@ input[type="range"].mobile_line::-webkit-slider-thumb{
 	max-width: 72%;
 	min-width: 720px;
 	margin: 0 auto;
-	border: 2px solid firebrick;
 }
 
 .news h2{
@@ -619,18 +618,12 @@ input[type="range"].mobile_line::-webkit-slider-thumb{
 /* ===== 最新消息 ===== */
 .news_block{
 	display: inline-block;
-	/* vertical-align: top; */
-	border: 2px solid violet;
-	/* RWD 側邊攔要調整跑去哪 或漢堡? */
-}
-
-.news_block li{
-	/* display: inline-block; */
 }
 
 .news_block .new1, .new2, .new3, .new4, .new5, .new6{
 	display: flex;
 }
+
 .news_block .photo1, .photo2, .photo3, .photo4, .photo5, .photo6{
 	width: 50%;
 	margin-left: 10px;
@@ -638,16 +631,6 @@ input[type="range"].mobile_line::-webkit-slider-thumb{
 
 .news_block .article1, .article2, .article3, .article4, .article5, .article6{
 	width: 50%;
-}
-
-.news_block .new1 img{
-	/* max-width: 100%; */
-	/* display: inline-block; */
-}
-
-.news_block .new1 .article1, .article2, .article3, .article4, .article5, .article6{
-	/* display: inline-block; */
-	/* vertical-align: top; */
 }
 
 .news_block h3{
@@ -658,7 +641,6 @@ input[type="range"].mobile_line::-webkit-slider-thumb{
 	margin-left: 10px;
 	padding: 8px;
 	display: inline-block;
-	/* vertical-align: top; */
 }
 
 .news_block h4{
@@ -684,6 +666,7 @@ aside{
 	outline: 2px solid #ffffff;
 	position: sticky;
 	top: 120px;
+	/* RWD 側邊攔要調整跑去哪? */
 }
 
 aside h3{
