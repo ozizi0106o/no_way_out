@@ -79,7 +79,3 @@ function closePlay2(){
     pausebtn2.classList.remove("show");
     playbtn2.classList.add("show");
 }
-
-
-
-

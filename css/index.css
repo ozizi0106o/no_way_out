@@ -603,6 +603,8 @@ input[type="range"].mobile_line::-webkit-slider-thumb{
 }
 
 .swiper-slide{
+	/* max-width: 736px; */
+	/* width: 100%; */
 	text-align: center;
 	font-size: 18px;
 
@@ -693,101 +695,82 @@ input[type="range"].mobile_line::-webkit-slider-thumb{
 	padding-left: 185px;
 } */
 
-
-
-
-
-
-
-
 /* ===== new song ===== */
 
 .new_song{
+	max-width: 50%;
 	margin: 0 auto;
-	width: 700px;
 	margin-top: 50px;
 }
 
 .new_song h2{
 	font-size: 30px;
 	text-align: center;
-	margin-bottom: 50px;
-}
-
-.new_song ul{
-	display: inline-flex;
-	flex-wrap: wrap;
-	justify-content: center;
+	margin-bottom: 30px;
 }
 
 .new_song li{
 	background-color: #ffffff;
 	margin-bottom: 30px;
-	display: inline-flex;
+	position: relative;
 }
 
-.new_song li img{
-	display: block;
-	/* 移到圖片跑出一條下底線 */
+.new_song li:hover{
+	background-color: rgba(0,0,0,0);
+	border-bottom: 2px solid #ffffff;
 }
 
 .new_song li a{
-	width: 500px;
 	text-decoration-line: none;
-	box-sizing: border-box;
-	/* position: relative; */
+	display: block;
 }
 
 .new_song li a img{
-	width: 15px;
-	/* padding-top: 65px; */
-	/* padding-left: 20px; */
+	display: inline-block;
+	display: block;
+}
+
+.new_song .rank1{
 	position: absolute;
-	top:65px;
-	left:20px;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 160px;
+	/* hover過去要消失 */
+}
+
+.new_song li a .song1, .song2, .song3, .song4, .song5{
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 200px;
 }
 
 .new_song li a h3{
 	color: #000000;
 	font-size: 22px;
-	/* 文字往上提 */
-	padding-left: 100px;
+	font-weight: bold;
+	/* hover過去 文字變色 */
 }
 
 .new_song li a h4{
 	color: #000000;
 	font-size: 18px;
 	padding-top: 10px;
-	padding-left: 100px;
+	/* hover過去 文字變色 */
 }
 
-.new_song li:hover{
-	background-color: rgba(0,0,0,0);
-	/* border-bottom: 2px solid #ffffff; */
+.aud_icon{
+	display: inline-flex;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	/* hover過去才出現 */
 }
 
-.new_song li a:hover{
-	background-image: 
-	url(../img/btn_play.png),
-	url(../img/btn_favorite.png),
-	url(../img/btn_add.png);
-	background-repeat: no-repeat, no-repeat, no-repeat;
-	background-position: bottom 20px left 400px, bottom 20px left 430px, bottom 20px left 460px;
-	background-size: 20px;
-	/* hover完還是要可以當連結選取 */
-}
-
-.new_song li a:hover img{
-	/* display: none; */
-	opacity: 0;
-}
-
-.new_song li a:hover h3{
-	color: #ffffff;
-}
-
-.new_song li a:hover h4{
-	color: #ffffff;
+.aud_icon a{
+	margin-bottom: 10px;
+	margin-right: 10px;
 }
 
 /* ===== news ===== */
