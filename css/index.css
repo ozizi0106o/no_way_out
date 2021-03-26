@@ -79,7 +79,7 @@ header{
 	background-color: #ffffff;
 	border-radius: 10px;
 	position: absolute;
-	top: calc(100%  + 15px);
+	top: calc(100%  + 8px);
 	/* 筆記算法：從top下來100% 再多加15px的位置 */
 	left: 50%;
 	transform: translateX(-50%);
@@ -109,6 +109,7 @@ header{
 }
 
 .menu_bar ol li{
+	min-width: 100px;
 	padding: 10px;
 }
 
@@ -710,7 +711,10 @@ input[type="range"].mobile_line::-webkit-slider-thumb{
 }
 
 .new_song li{
-	background-color: #ffffff;
+	/* background-color: #ffffff; */
+	border: 2px solid gold;
+	
+	border-bottom: 2px solid #000000;
 	margin-bottom: 30px;
 	position: relative;
 }
@@ -760,15 +764,14 @@ input[type="range"].mobile_line::-webkit-slider-thumb{
 	/* hover過去 文字變色 */
 }
 
-.aud_icon{
+.aud_icon1, .aud_icon2, .aud_icon3, .aud_icon4, .aud_icon5{
 	display: inline-flex;
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	/* hover過去才出現 */
 }
 
-.aud_icon a{
+.aud_icon1 a, .aud_icon2 a, .aud_icon3 a, .aud_icon4 a, .aud_icon5 a{
 	margin-bottom: 10px;
 	margin-right: 10px;
 }

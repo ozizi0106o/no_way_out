@@ -79,7 +79,7 @@ header{
 	background-color: #ffffff;
 	border-radius: 10px;
 	position: absolute;
-	top: calc(100%  + 15px);
+	top: calc(100%  + 8px);
 	/* 筆記算法：從top下來100% 再多加15px的位置 */
 	left: 50%;
 	transform: translateX(-50%);
@@ -109,6 +109,7 @@ header{
 }
 
 .menu_bar ol li{
+	min-width: 100px;
 	padding: 10px;
 }
 

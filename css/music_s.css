@@ -9,7 +9,11 @@
 
 	.menu_bar li a{
 		font-size: 20px;
-	} 
+	}
+
+	.menu_bar ol li{
+		min-width: 80px;
+	}
 
 	.menu_bar ol a{
 		color: #1C1C1C;
