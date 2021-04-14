@@ -80,7 +80,6 @@ function closePlay2(){
     playbtn2.classList.add("show");
 }
 
-
 // ===== main ster ===== //
 // 俊傑 //
 var shoot1 = new TimelineMax();
