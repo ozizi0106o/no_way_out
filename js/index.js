@@ -64,9 +64,8 @@ const playbtn2 = document.getElementById("playbtn2");
 const pausebtn2 = document.getElementById("pausebtn2");
 const play2 = document.getElementById("audio");
 play2.loop = true
-play2.muted = true
-function autoPlay2(){
-    
+// play2.muted = true
+function autoPlay2(){    
     play2.play();
     pausebtn2.classList.add("show");
     playbtn2.classList.remove("show");
