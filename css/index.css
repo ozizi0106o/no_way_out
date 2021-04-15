@@ -298,10 +298,12 @@ input[type="range"].timeline::-webkit-slider-thumb{
 	bottom: 27px;
 	right: 10px;
 	z-index: 3;
+	animation: cd 2.5s linear normal infinite;
+	animation-play-state: paused;
 }
 
 .desktop .cd_rotate.show{
-	animation: cd 2.5s linear normal infinite;
+	animation-play-state: running;
 	/* 暫停動畫 重放會從起始點開始 不會從暫停的地方@@ */
 }
 
@@ -745,16 +747,19 @@ input[type="range"].mobile_line::-webkit-slider-thumb{
 	font-weight: bold;
 }
 
-.new_song li h3:hover{
+.new_song li:hover h3{
 	color: #FFFFFF;
-	/* 區塊讓整個文字變色 有辦法嗎? 包含日期 */
 }
+/* 筆記：當hover過去li的畫面時，裡面的東西更改狀態! */
 
 .new_song li h4{
 	color: #000000;
 	font-size: 18px;
 	padding-top: 10px;
-	/* hover過去 文字變色 */
+}
+
+.new_song li:hover h4{
+	color: #FFFFFF;
 }
 
 .new_song li .add1{
@@ -984,6 +989,7 @@ input[type="range"].mobile_line::-webkit-slider-thumb{
 
 .photo{
 	max-width: 100%;
+	width: 100%;
 }
 
 .hot_mv h3{

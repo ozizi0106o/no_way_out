@@ -3,7 +3,7 @@
 	/* ===== menu bar ===== */
 	.menu_bar ul{
 		display: none;
-		}
+	}
 	
 	#burger:checked + .ham{
 		display: block;
@@ -71,7 +71,6 @@
 	.news_block h3{
 		font-size: 18px;
 		margin-left: 5px;
-		/* 灰色區塊會亂跑 */
 	}
 	
 	.news_block h4{
@@ -101,7 +100,10 @@
 	/* ===== hot mv ===== */
 	.hot_mv li{
 		width: 100%;
+		margin-left: 0;
 	}
+
+
 	/* singer條太大 會遮到臉 */
 
 	/* ===== footer ===== */
